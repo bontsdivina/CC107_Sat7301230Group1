@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="01caa01b-ca95-4f2f-a0f7-12ee48d66cdd" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="135" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615039395705">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="135" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1615039395705" />
+    <state x="461" y="122" key="FileChooserDialogImpl" timestamp="1615039541662">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="461" y="122" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1615039541662" />
+    <state x="182" y="13" key="SettingsEditor" timestamp="1615039374241">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="182" y="13" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1615039374241" />
+  </component>
+</project>
