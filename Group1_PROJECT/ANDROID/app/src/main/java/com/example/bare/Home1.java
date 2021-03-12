@@ -28,11 +28,27 @@ public class Home1 extends AppCompatActivity {
                 openEating();
             }
         });
+
+        medicine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openMedicine();
+            }
+        });
+
     }
+
+
     public void openEating(){
         Intent intent = new Intent(this,Eating.class);
         startActivity(intent);
     }
+
+    public void openMedicine(){
+        Intent intent = new Intent(this,Medicine.class);
+        startActivity(intent);
+    }
+
 
 
     }
