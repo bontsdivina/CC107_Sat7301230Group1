@@ -35,6 +35,19 @@ public class Home1 extends AppCompatActivity {
                 openMedicine();
             }
         });
+        vaccine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openVaccine();
+            }
+        });
+
+        sleep.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSleep();
+            }
+        });
 
     }
 
@@ -49,6 +62,15 @@ public class Home1 extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void openVaccine(){
+        Intent intent = new Intent(this,Vaccine.class);
+        startActivity(intent);
+    }
+
+    public void openSleep(){
+        Intent intent = new Intent(this,Sleep.class);
+        startActivity(intent);
+    }
 
 
     }

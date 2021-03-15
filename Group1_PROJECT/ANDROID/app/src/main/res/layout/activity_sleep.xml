@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fef2ea"
-    tools:context=".Eating">
 
+    tools:context=".Sleep">
 
     <Button
-        android:id="@+id/signup2"
+        android:id="@+id/signup5"
         android:layout_width="171dp"
         android:layout_height="53dp"
         android:layout_marginBottom="52dp"
@@ -23,8 +23,17 @@
         app:layout_constraintTop_toBottomOf="@+id/login"
         app:layout_constraintVertical_bias="0.768" />
 
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="157dp"
+        android:layout_height="143dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sleep" />
+
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/imageButton5"
         android:layout_width="153dp"
         android:layout_height="100dp"
         android:layout_marginStart="292dp"
@@ -37,12 +46,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/back_button" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="157dp"
-        android:layout_height="143dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/eating" />
 </androidx.constraintlayout.widget.ConstraintLayout>
