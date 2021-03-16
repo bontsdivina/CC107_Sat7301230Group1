@@ -7,6 +7,14 @@
     android:background="#fef2ea"
     tools:context=".Vaccine">
 
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="157dp"
+        android:layout_height="143dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vaccine" />
+
     <Button
         android:id="@+id/signup4"
         android:layout_width="171dp"
@@ -21,21 +29,6 @@
 
         app:layout_constraintTop_toBottomOf="@+id/login"
         app:layout_constraintVertical_bias="0.768" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="102dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="144dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton4"
-        app:layout_constraintHorizontal_bias="0.006"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025"
-        app:srcCompat="@drawable/vaccine" />
 
     <ImageButton
         android:id="@+id/imageButton4"

@@ -8,6 +8,14 @@
     tools:context=".Medicine">
 
 
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="157dp"
+        android:layout_height="143dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/medicine" />
+
     <Button
         android:id="@+id/signup3"
         android:layout_width="171dp"
@@ -39,21 +47,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/back_button" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="143dp"
-        android:layout_height="106dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="144dp"
-        app:layout_constraintBottom_toTopOf="@+id/signup3"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/medicine" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
