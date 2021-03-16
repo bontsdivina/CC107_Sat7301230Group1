@@ -6,38 +6,38 @@
     android:layout_height="match_parent"
     android:background="#fef2ea"
     tools:context=".MainActivity">
-<Button
-    android:id="@+id/login"
-    android:layout_width="156dp"
-    android:layout_height="83dp"
-    android:text="Log IN"
-    app:backgroundTint="#769F9A"
-    app:cornerRadius="8dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.498"
 
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4"
-    app:layout_constraintVertical_bias="0.138" />
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="156dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="60dp"
+        android:onClick="login"
+        android:text="Log IN"
+        app:backgroundTint="#769F9A"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.138" />
 
-<Button
-    android:id="@+id/signup"
-    android:layout_width="156dp"
-    android:layout_height="83dp"
-    android:layout_marginBottom="128dp"
-    android:text="Sign Up"
-    app:backgroundTint="#769F9A"
-    app:cornerRadius="8dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.498"
-    app:layout_constraintStart_toStartOf="parent"
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="156dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="180dp"
+        android:onClick="Signup"
+        android:text="Sign Up"
+        app:backgroundTint="#769F9A"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.768" />
 
-    app:layout_constraintTop_toBottomOf="@+id/login"
-    app:layout_constraintVertical_bias="0.768" />
-
-<ImageView
+    <ImageView
     android:id="@+id/imageView3"
     android:layout_width="330dp"
     android:layout_height="410dp"
@@ -52,11 +52,13 @@
     app:srcCompat="@drawable/footprint_bg" />
 
 <EditText
-    android:id="@+id/editTextTextPersonName3"
+    android:id="@+id/etUsername"
     android:layout_width="258dp"
     android:layout_height="55dp"
     android:layout_marginTop="112dp"
     android:ems="10"
+    android:hint="Username"
+    android:gravity="center"
     android:inputType="textPersonName"
     android:textColor="#769F9A"
     android:textSize="25sp"
@@ -65,11 +67,13 @@
     app:layout_constraintTop_toTopOf="parent" />
 
 <EditText
-    android:id="@+id/editTextTextPersonName4"
+    android:id="@+id/etPassword"
     android:layout_width="255dp"
     android:layout_height="46dp"
     android:layout_marginTop="248dp"
     android:textSize="25sp"
+    android:hint="Password"
+    android:gravity="center"
     android:textColor="#769F9A"
     android:ems="10"
     android:inputType="textPersonName"
