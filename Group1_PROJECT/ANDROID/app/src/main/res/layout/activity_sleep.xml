@@ -35,8 +35,7 @@
         android:id="@+id/imageButton5"
         android:layout_width="102dp"
         android:layout_height="71dp"
-        android:layout_marginStart="292dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginBottom="144dp"
         android:adjustViewBounds="true"
 
@@ -44,6 +43,7 @@
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.941"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/back_button" />
