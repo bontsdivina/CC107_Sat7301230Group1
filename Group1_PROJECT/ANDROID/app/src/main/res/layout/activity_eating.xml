@@ -8,20 +8,43 @@
     tools:context=".Eating">
 
 
-    <Button
-        android:id="@+id/signup2"
-        android:layout_width="171dp"
-        android:layout_height="53dp"
-        android:layout_marginBottom="52dp"
-        android:text="ADD"
-        app:backgroundTint="#769F9A"
-        app:cornerRadius="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageButton
+        android:id="@+id/eating4"
+        android:layout_width="134dp"
+        android:layout_height="134dp"
+        android:layout_marginBottom="188dp"
+        android:background="@drawable/round"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/eating3"
+        app:srcCompat="@drawable/eathistory" />
 
-        app:layout_constraintTop_toBottomOf="@+id/login"
-        app:layout_constraintVertical_bias="0.768" />
+    <ImageButton
+        android:id="@+id/eating2"
+        android:layout_width="134dp"
+        android:layout_height="134dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/round"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/addeating" />
+
+    <ImageButton
+        android:id="@+id/eating3"
+        android:layout_width="134dp"
+        android:layout_height="134dp"
+        android:layout_marginBottom="196dp"
+        android:background="@drawable/round"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/eatday" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -60,5 +83,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="16dp" />
+        app:layout_constraintGuide_end="14dp" />
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
