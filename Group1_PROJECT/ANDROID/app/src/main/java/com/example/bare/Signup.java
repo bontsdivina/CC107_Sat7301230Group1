@@ -1,7 +1,5 @@
 package com.example.bare;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -27,7 +27,7 @@ public class Signup extends AppCompatActivity {
     EditText etName,etPassword,etEmail,etReenterPassword;
     String name,email,password,reenterPassword;
     TextView tvStatus;
-    private String URL="http://192.168.100.4/bare/register.php";
+    private String URL="https://baredb.000webhostapp.com/bare/register.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,47 +47,52 @@ public class Signup extends AppCompatActivity {
 
 
     public void Register(View view) {
-        name=etName.getText().toString().trim();
-        password=etPassword.getText().toString().trim();
-        email=etEmail.getText().toString().trim();
-        reenterPassword=etReenterPassword.getText().toString().trim();
-        if (!password.equals(reenterPassword)){
-            Toast.makeText(this,"Password Mismatch Make Sure You Enter Correct Password",Toast.LENGTH_SHORT).show();
-        }
-        else if(!name.equals("") && !email.equals("") && !password.equals(""));
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                if (response.equals("success")) {
-                    tvStatus.setText("Successfully Registered.");
-                    etName.setText("");
-                    etEmail.setText("");
-                    etPassword.setText("");
-                    etReenterPassword.setText("");
-                    btnRegister.setClickable(false);
+        name = etName.getText().toString().trim();
+        password = etPassword.getText().toString().trim();
+        email = etEmail.getText().toString().trim();
+        reenterPassword = etReenterPassword.getText().toString().trim();
+        if (!password.equals(reenterPassword)) {
+            Toast.makeText(this, "Password Mismatch Make Sure You Enter Correct Password", Toast.LENGTH_SHORT).show();
+        } else if (!name.equals("") && !email.equals("") && !password.equals("")) {
 
-                } else if (response.equals("failure")) {
-                    tvStatus.setText("Something went wrong!");
-                    btnRegister.setClickable(false);
+
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    if (response.equals("success")) {
+                        tvStatus.setText("Successfully Registered.");
+                        etName.setText("");
+                        etEmail.setText("");
+                        etPassword.setText("");
+                        etReenterPassword.setText("");
+                        btnRegister.setClickable(false);
+
+                    } else if (response.equals("failure")) {
+                        tvStatus.setText("Something went wrong!");
+                        btnRegister.setClickable(false);
+                    }
                 }
-            }
-        }, new Response.ErrorListener(){
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getApplicationContext(),error.toString().trim(), Toast.LENGTH_SHORT).show();
-            }
-        }){
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> data = new HashMap<>();
-                data.put("Username",name);
-                data.put("Password",password);
-                data.put("Email",email);
-                return data;
-            }
-        };
-        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-        requestQueue.add(stringRequest);
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(getApplicationContext(), error.toString().trim(), Toast.LENGTH_SHORT).show();
+                }
+            }) {
+                @Override
+                protected Map<String, String> getParams() throws AuthFailureError {
+                    Map<String, String> data = new HashMap<>();
+                    data.put("Username", name);
+                    data.put("Password", password);
+                    data.put("Email", email);
+                    return data;
+                }
+            };
+            RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+            requestQueue.add(stringRequest);
+        }
+        else{
+            tvStatus.setText("Field Cannot Be Empty!");
+        }
     }
 
 

@@ -1,13 +1,12 @@
 package com.example.bare;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText etUsername, etPassword;
     private String Username ,Password;
-    private String URL= "http://192.168.100.4/bare/login.php";
+    private String URL= "https://baredb.000webhostapp.com/bare/login.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

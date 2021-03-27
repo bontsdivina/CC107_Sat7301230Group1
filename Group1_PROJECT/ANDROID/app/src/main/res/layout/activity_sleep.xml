@@ -48,7 +48,8 @@
         app:srcCompat="@drawable/sleep_day" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btnBack"
+        android:onClick="Back"
         android:layout_width="102dp"
         android:layout_height="71dp"
         android:layout_marginBottom="144dp"

@@ -90,11 +90,11 @@
         app:srcCompat="@drawable/sleep" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/btnBack"
         android:layout_width="102dp"
         android:layout_height="71dp"
         android:adjustViewBounds="true"
-
+android:onClick="Back"
         android:background="@drawable/round"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
