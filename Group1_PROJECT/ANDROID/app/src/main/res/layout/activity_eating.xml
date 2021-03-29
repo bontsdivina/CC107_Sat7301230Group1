@@ -22,11 +22,12 @@
         app:srcCompat="@drawable/eathistory" />
 
     <ImageButton
-        android:id="@+id/eating2"
+        android:id="@+id/feed"
         android:layout_width="95dp"
         android:layout_height="91dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/round"
+        android:onClick="Feed"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,12 +35,11 @@
         app:srcCompat="@drawable/addeating" />
 
     <ImageButton
-        android:id="@+id/feed"
+        android:id="@+id/recent"
         android:layout_width="95dp"
         android:layout_height="91dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/round"
-        android:onClick="Feed"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"

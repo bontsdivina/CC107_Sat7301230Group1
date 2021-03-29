@@ -49,12 +49,12 @@ public class Eating extends AppCompatActivity {
                 @Override
                 public void onResponse(String response) {
                     if (response.equals("success")) {
-                        tvStatus.setText("Successfully Registered.");
+                        Toast.makeText(Eating.this, "Yummy !!", Toast.LENGTH_SHORT).show();
                         txtType.setText("");
                         txtQty.setText("");
 
                     } else if (response.equals("failure")) {
-                        tvStatus.setText("Something went wrong!");
+                        Toast.makeText(Eating.this, "Something Went Wrong !!", Toast.LENGTH_SHORT).show();
                     }
                 }
             }, new Response.ErrorListener() {
@@ -75,7 +75,7 @@ public class Eating extends AppCompatActivity {
             requestQueue.add(stringRequest);
 
         }else{
-            tvStatus.setText("Field Cannot Be Empty!");
+            Toast.makeText(Eating.this, "Fields Should not be empty", Toast.LENGTH_SHORT).show();
         }
     }
     }

@@ -60,7 +60,7 @@ public class Signup extends AppCompatActivity {
                 @Override
                 public void onResponse(String response) {
                     if (response.equals("success")) {
-                        tvStatus.setText("Successfully Registered.");
+                        Toast.makeText(Signup.this, "Successfully Registered", Toast.LENGTH_SHORT).show();
                         etName.setText("");
                         etEmail.setText("");
                         etPassword.setText("");
@@ -68,7 +68,7 @@ public class Signup extends AppCompatActivity {
                         btnRegister.setClickable(false);
 
                     } else if (response.equals("failure")) {
-                        tvStatus.setText("Something went wrong!");
+                        Toast.makeText(Signup.this, "Something Went Wrong!", Toast.LENGTH_SHORT).show();
                         btnRegister.setClickable(false);
                     }
                 }
@@ -91,8 +91,11 @@ public class Signup extends AppCompatActivity {
             requestQueue.add(stringRequest);
         }
         else{
-            tvStatus.setText("Field Cannot Be Empty!");
+            Toast.makeText(Signup.this, "Fields Should not be empty", Toast.LENGTH_SHORT).show();
         }
+        Intent intent=new Intent(this, MainActivity.class);
+        startActivity(intent);
+
     }
 
 
