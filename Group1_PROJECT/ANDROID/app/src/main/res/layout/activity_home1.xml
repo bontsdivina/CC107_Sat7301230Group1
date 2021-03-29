@@ -25,8 +25,10 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="168dp"
-        android:layout_height="180dp"
+        android:layout_width="155dp"
+        android:layout_height="168dp"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,38 +43,42 @@
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toStartOf="@+id/guideline12"
-        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintHorizontal_bias="0.021"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline8"
-        app:layout_constraintVertical_bias="0.728"
+        app:layout_constraintVertical_bias="0.742"
         app:srcCompat="@drawable/eating" />
 
     <ImageButton
         android:id="@+id/medicine"
         android:layout_width="82dp"
         android:layout_height="118dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="24dp"
         android:background="@drawable/round"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.361"
+        app:layout_constraintHorizontal_bias="0.343"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline8"
-        app:layout_constraintVertical_bias="0.728"
+        app:layout_constraintVertical_bias="0.742"
         app:srcCompat="@drawable/medicine" />
 
     <ImageButton
         android:id="@+id/vaccine"
         android:layout_width="82dp"
         android:layout_height="118dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/round"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.669"
+        app:layout_constraintHorizontal_bias="0.643"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toTopOf="@+id/guideline8"
-        app:layout_constraintVertical_bias="0.737"
+        app:layout_constraintVertical_bias="0.742"
         app:srcCompat="@drawable/vaccine" />
 
     <ImageButton
@@ -83,23 +89,31 @@
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toStartOf="@+id/guideline12"
-        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintHorizontal_bias="0.978"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toTopOf="@+id/guideline8"
-        app:layout_constraintVertical_bias="0.737"
+        app:layout_constraintVertical_bias="0.742"
         app:srcCompat="@drawable/sleep" />
 
     <ImageButton
         android:id="@+id/btnBack"
-        android:layout_width="102dp"
-        android:layout_height="71dp"
+        android:layout_width="61dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="116dp"
         android:adjustViewBounds="true"
-android:onClick="Back"
-        android:background="@drawable/round"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
 
+        android:background="@drawable/round"
+        android:onClick="Back"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="@+id/guideline6"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/logout" />
 
     <androidx.constraintlayout.widget.Guideline
