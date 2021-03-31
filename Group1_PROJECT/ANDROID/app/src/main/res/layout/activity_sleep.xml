@@ -89,4 +89,45 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_end="14dp" />
 
+    <EditText
+        android:id="@+id/editTextTextPersonName9"
+        android:layout_width="264dp"
+        android:layout_height="62dp"
+
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="4dp"
+
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline13" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName10"
+        android:layout_width="264dp"
+        android:layout_height="62dp"
+
+        android:layout_marginStart="72dp"
+
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <ListView
+        android:layout_width="212dp"
+        android:layout_height="271dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName10" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
