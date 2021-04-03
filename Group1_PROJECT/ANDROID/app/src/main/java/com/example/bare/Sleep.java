@@ -36,7 +36,7 @@ public class Sleep extends AppCompatActivity {
                 @Override
                 public void onResponse(String response) {
                     if (response.equals("success")) {
-                        Toast.makeText(Sleep.this, "Yummy !!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Sleep.this, "Sleep Well!!", Toast.LENGTH_SHORT).show();
 
                     } else if (response.equals("failure")) {
                         Toast.makeText(Sleep.this, "Something Went Wrong !!", Toast.LENGTH_SHORT).show();
@@ -66,7 +66,7 @@ public class Sleep extends AppCompatActivity {
                 @Override
                 public void onResponse(String response) {
                     if (response.equals("success")) {
-                        Toast.makeText(Sleep.this, "Yummy !!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Sleep.this, "Awake!!", Toast.LENGTH_SHORT).show();
 
                     } else if (response.equals("failure")) {
                         Toast.makeText(Sleep.this, "Something Went Wrong !!", Toast.LENGTH_SHORT).show();

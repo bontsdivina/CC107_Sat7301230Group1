@@ -46,7 +46,7 @@ public class Medicine extends AppCompatActivity {
                 @Override
                 public void onResponse(String response) {
                     if (response.equals("success")) {
-                        Toast.makeText(Medicine.this, "Yummy !!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Medicine.this, "Get Well Soon!!", Toast.LENGTH_SHORT).show();
                         etPrescription.setText("");
                         etKind.setText("");
                         etQuantity.setText("");

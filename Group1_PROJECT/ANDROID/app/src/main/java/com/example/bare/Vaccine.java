@@ -44,7 +44,7 @@ public class Vaccine extends AppCompatActivity {
                 @Override
                 public void onResponse(String response) {
                     if (response.equals("success")) {
-                        Toast.makeText(Vaccine.this, "Yummy !!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Vaccine.this, "Done Vaccinating!!", Toast.LENGTH_SHORT).show();
                         etnameVaccine.setText("");
                         etkind.setText("");
 
