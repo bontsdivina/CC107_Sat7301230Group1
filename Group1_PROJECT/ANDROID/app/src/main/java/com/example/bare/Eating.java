@@ -1,10 +1,14 @@
 package com.example.bare;
 
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,23 +21,137 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Eating extends AppCompatActivity {
-    EditText txtType,txtQty;
-    String Type_Of_Food,Quantity;
-    TextView tvStatus;
-    private String URL="https://baredb.000webhostapp.com/bare/insertfeed.php";
 
+public class Eating extends AppCompatActivity{
+    EditText txtType,txtQty;
+    MyAdapter adapter;
+    String Date, Time,Type_Of_Food,Quantity;
+    ProgressDialog mProgressDialog;
+    ListView listView;
+    public static ArrayList<Feed> FeedArrayList = new ArrayList<>();
+    private String URL="https://baredb.000webhostapp.com/bare/insertfeed.php";
+    private String URL2="https://baredb.000webhostapp.com/bare/retrieve.php";
+    Feed feed;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eating);
         txtType=findViewById(R.id.txtType);
         txtQty=findViewById(R.id.txtQty);
-        tvStatus=findViewById(R.id.tvStatus);
         Type_Of_Food=Quantity="";
+        listView=findViewById(R.id.myListView);
+        adapter = new MyAdapter(this,FeedArrayList);
+        listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                ProgressDialog progressDialog = new ProgressDialog(view.getContext());
+
+                CharSequence[] dialogItem = {"View Data","Delete Data"};
+                builder.setTitle(FeedArrayList.get(position).getDate());
+                builder.setItems(dialogItem,new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int i) {
+
+                        switch (i){
+
+                            case 0:
+
+                                startActivity(new Intent(getApplicationContext(),FeedDetails.class)
+                                        .putExtra("position",position));
+
+                                break;
+
+                        }
+
+
+
+                    }
+                });
+
+
+                builder.create().show();
+
+
+            }
+        });
+
+
+
+
+    }
+    public void retrieveData(){
+
+        StringRequest request = new StringRequest(Request.Method.POST, URL2,new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
+                        FeedArrayList.clear();
+                        try{
+
+                            JSONObject jsonObject = new JSONObject(response);
+                            String success = jsonObject.getString("success");
+                            JSONArray jsonArray = jsonObject.getJSONArray("Feed");
+
+                            if(success.equals("1")){
+
+
+                                for(int i=0;i<jsonArray.length();i++){
+
+                                    JSONObject object = jsonArray.getJSONObject(i);
+
+                                    String id = object.getString("id");
+                                    String Date = object.getString("Date");
+                                    String Time = object.getString("Time");
+                                    String Type_Of_Food = object.getString("Type_Of_Food");
+                                    String Quantity = object.getString("Quantity");
+
+                                    feed = new Feed(id,Date,Time,Type_Of_Food,Quantity);
+                                    FeedArrayList.add(feed);
+                                    adapter.notifyDataSetChanged();
+
+
+
+                                }
+
+
+
+                            }
+
+
+
+
+                        }
+                        catch (JSONException e){
+                            e.printStackTrace();
+                        }
+
+
+
+
+
+
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(Eating.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(request);
 
     }
     public void Back(View view) {
@@ -78,5 +196,11 @@ public class Eating extends AppCompatActivity {
             Toast.makeText(Eating.this, "Fields Should not be empty", Toast.LENGTH_SHORT).show();
         }
     }
+
+
+    public void ViewAll(View view) {
+        retrieveData();
     }
+}
+
 

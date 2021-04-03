@@ -33,6 +33,9 @@
         <activity android:name=".Sleep">
 
         </activity>
+        <activity android:name=".FeedDetails">
+        </activity>
+
         <activity android:name=".Splash_screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
