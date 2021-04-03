@@ -9,7 +9,7 @@
 
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/etnameVaccine"
         android:layout_width="264dp"
         android:layout_height="62dp"
 
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline14" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName6"
+        android:id="@+id/etkind"
         android:layout_width="264dp"
         android:layout_height="62dp"
 
@@ -32,15 +32,16 @@
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+        app:layout_constraintTop_toBottomOf="@+id/etnameVaccine" />
 
     <ImageButton
-        android:id="@+id/eating2"
+        android:id="@+id/LogVaccine"
         android:layout_width="95dp"
         android:layout_height="91dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/round"
         android:scaleType="fitCenter"
+        android:onClick="LogVaccine"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.212"
@@ -115,7 +116,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+        app:layout_constraintTop_toBottomOf="@+id/etkind" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,6 +8,18 @@
     tools:context=".Medicine">
 
 
+    <EditText
+        android:id="@+id/etQuantity"
+        android:layout_width="264dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#769F9A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPrescription" />
+
     <ImageButton
         android:id="@+id/eating4"
         android:layout_width="95dp"
@@ -22,12 +34,13 @@
         app:srcCompat="@drawable/med_history" />
 
     <ImageButton
-        android:id="@+id/eating2"
+        android:id="@+id/LogWake"
         android:layout_width="95dp"
         android:layout_height="91dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/round"
         android:scaleType="fitCenter"
+        android:onClick="InsertMed"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -93,7 +106,7 @@
         app:layout_constraintGuide_percent="1" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etPrescription"
         android:layout_width="264dp"
         android:layout_height="62dp"
         android:layout_marginStart="72dp"
@@ -106,16 +119,16 @@
         app:layout_constraintTop_toTopOf="@+id/guideline10" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/etKind"
         android:layout_width="264dp"
         android:layout_height="62dp"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="#769F9A"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/etPrescription" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline10"
@@ -125,13 +138,18 @@
         app:layout_constraintGuide_percent="0.13" />
 
     <ListView
+        android:id="@+id/listDisp"
         android:layout_width="212dp"
-        android:layout_height="271dp"
 
-        android:layout_marginTop="24dp"
+        android:layout_height="271dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginBottom="44dp"
+        app:layout_constraintBottom_toTopOf="@+id/LogWake"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/etQuantity"
+        app:layout_constraintVertical_bias="0.945" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
