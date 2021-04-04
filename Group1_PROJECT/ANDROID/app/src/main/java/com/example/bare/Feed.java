@@ -8,10 +8,9 @@ public class Feed {
     public Feed() {
     }
 
-    public Feed(String id, String Date , String Time, String Type_Of_Food, String Quantity) {
+    public Feed(String id, String Date, String Type_Of_Food, String Quantity) {
         this.id = id;
         this.Date = Date;
-        this.Time = Time;
         this.Type_Of_Food = Type_Of_Food;
         this.Quantity = Quantity;
     }
@@ -54,3 +53,7 @@ public class Feed {
     }
 
 }
+
+
+
+

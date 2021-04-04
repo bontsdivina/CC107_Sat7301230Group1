@@ -16,7 +16,6 @@ public class FeedDetails extends Eating {
         //Initializing Views
         tvid = findViewById(R.id.txtid);
         tvDate = findViewById(R.id.txtDate);
-        tvTime = findViewById(R.id.txtTime);
         tvType = findViewById(R.id.txtType);
         tvQuantity = findViewById(R.id.txtQuantity);
 
@@ -24,14 +23,9 @@ public class FeedDetails extends Eating {
         position = intent.getExtras().getInt("position");
 
         tvid.setText("ID: "+Eating.FeedArrayList.get(position).getid());
-        tvDate.setText("Date: "+Eating.FeedArrayList.get(position).getDate());
-        tvTime.setText("Time: "+Eating.FeedArrayList.get(position).getTime());
+        tvDate.setText("DateTime: "+Eating.FeedArrayList.get(position).getDate());
         tvType.setText("Type_Of_Food: "+Eating.FeedArrayList.get(position).getType_Of_Food());
         tvQuantity.setText("Quantity: "+Eating.FeedArrayList.get(position).getQuantity());
-
-
-
-
 
     }
 }

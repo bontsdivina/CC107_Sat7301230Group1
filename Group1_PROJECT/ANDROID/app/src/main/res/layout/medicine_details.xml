@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
-    android:padding="10dp"
-    tools:context=".FeedDetails">
-
+    android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,18 +14,25 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Date/Time:"
+        android:text="Date And Time:"
         android:textSize="20sp"
         android:id="@+id/txtDate"
         android:layout_marginBottom="10dp"
         />
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Type Of Food:"
+        android:text="Prescription:"
         android:textSize="20sp"
-        android:id="@+id/txtType"
+        android:id="@+id/txtPrescription"
+        android:layout_marginBottom="10dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kind:"
+        android:textSize="20sp"
+        android:id="@+id/txtKind"
         android:layout_marginBottom="10dp"
         />
     <TextView
@@ -40,5 +43,4 @@
         android:id="@+id/txtQuantity"
         android:layout_marginBottom="10dp"
         />
-
 </LinearLayout>

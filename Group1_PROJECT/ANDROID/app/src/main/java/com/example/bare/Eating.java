@@ -112,12 +112,11 @@ public class Eating extends AppCompatActivity{
                                     JSONObject object = jsonArray.getJSONObject(i);
 
                                     String id = object.getString("id");
-                                    String Date = object.getString("Date");
-                                    String Time = object.getString("Time");
+                                    String Date = object.getString("DateTime");
                                     String Type_Of_Food = object.getString("Type_Of_Food");
                                     String Quantity = object.getString("Quantity");
 
-                                    feed = new Feed(id,Date,Time,Type_Of_Food,Quantity);
+                                    feed = new Feed(id,Date,Type_Of_Food,Quantity);
                                     FeedArrayList.add(feed);
                                     adapter.notifyDataSetChanged();
 
