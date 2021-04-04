@@ -27,39 +27,40 @@
         android:id="@+id/eating4"
         android:layout_width="95dp"
         android:layout_height="91dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="504dp"
         android:background="@drawable/round"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.851"
+        app:layout_constraintHorizontal_bias="0.846"
         app:layout_constraintStart_toEndOf="@+id/eating3"
+        app:layout_constraintTop_toTopOf="@+id/guideline13"
         app:srcCompat="@drawable/sleep_history" />
 
     <ImageButton
         android:id="@+id/LogWake"
         android:layout_width="95dp"
         android:layout_height="91dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="504dp"
         android:background="@drawable/round"
-        android:scaleType="fitCenter"
         android:onClick="LogWake"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline13"
         app:srcCompat="@drawable/add_sleep" />
 
     <ImageButton
         android:id="@+id/eating3"
         android:layout_width="95dp"
         android:layout_height="91dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="504dp"
         android:background="@drawable/round"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline13"
         app:srcCompat="@drawable/sleep_day" />
 
     <ImageButton
@@ -96,13 +97,6 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="20dp"
         app:layout_constraintGuide_percent="0.0" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.98" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline13"

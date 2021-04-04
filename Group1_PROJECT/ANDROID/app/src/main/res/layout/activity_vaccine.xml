@@ -39,27 +39,27 @@
         android:id="@+id/LogVaccine"
         android:layout_width="95dp"
         android:layout_height="91dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="504dp"
         android:background="@drawable/round"
-        android:scaleType="fitCenter"
         android:onClick="LogVaccine"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintHorizontal_bias="0.227"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline14"
         app:srcCompat="@drawable/add_vaccine" />
 
     <ImageButton
         android:id="@+id/eating3"
         android:layout_width="95dp"
         android:layout_height="91dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="504dp"
         android:background="@drawable/round"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintHorizontal_bias="0.816"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline14"
         app:srcCompat="@drawable/vacc_history" />
 
     <ImageButton
@@ -95,13 +95,6 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="20dp"
         app:layout_constraintGuide_percent="0.0" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.98" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline14"

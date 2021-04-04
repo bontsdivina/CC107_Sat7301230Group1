@@ -12,40 +12,40 @@
         android:id="@+id/ViewAll"
         android:layout_width="95dp"
         android:layout_height="91dp"
+        android:layout_marginTop="41dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="20dp"
-        android:onClick="ViewAll"
         android:background="@drawable/round"
+        android:onClick="ViewAll"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/eating3"
+        app:layout_constraintTop_toBottomOf="@+id/myListView"
         app:srcCompat="@drawable/eathistory" />
 
     <ImageButton
         android:id="@+id/feed"
         android:layout_width="95dp"
         android:layout_height="91dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="41dp"
         android:background="@drawable/round"
         android:onClick="Feed"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myListView"
         app:srcCompat="@drawable/addeating" />
 
     <ImageButton
         android:id="@+id/recent"
         android:layout_width="95dp"
         android:layout_height="91dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="41dp"
         android:background="@drawable/round"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myListView"
         app:srcCompat="@drawable/eatday" />
 
     <ImageButton
@@ -118,17 +118,10 @@
         app:layout_constraintGuide_begin="20dp"
         app:layout_constraintGuide_percent="0.0" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.98" />
-
     <ListView
         android:id="@+id/myListView"
-        android:layout_width="331dp"
-        android:layout_height="333dp"
+        android:layout_width="332dp"
+        android:layout_height="315dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="12dp"
         app:layout_constraintStart_toStartOf="parent"

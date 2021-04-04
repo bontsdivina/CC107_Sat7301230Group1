@@ -26,39 +26,39 @@
         android:id="@+id/eating4"
         android:layout_width="95dp"
         android:layout_height="91dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="516dp"
         android:background="@drawable/round"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintHorizontal_bias="0.781"
         app:layout_constraintStart_toEndOf="@+id/eating3"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
         app:srcCompat="@drawable/med_history" />
 
     <ImageButton
         android:id="@+id/LogWake"
         android:layout_width="95dp"
         android:layout_height="91dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="516dp"
         android:background="@drawable/round"
-        android:scaleType="fitCenter"
         android:onClick="InsertMed"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
         app:srcCompat="@drawable/add_med" />
 
     <ImageButton
         android:id="@+id/eating3"
         android:layout_width="95dp"
         android:layout_height="91dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="516dp"
         android:background="@drawable/round"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
         app:srcCompat="@drawable/med_day" />
 
     <ImageButton
@@ -98,13 +98,6 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="20dp"
         app:layout_constraintGuide_percent="0.0" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.99" />
 
     <EditText
         android:id="@+id/etPrescription"
