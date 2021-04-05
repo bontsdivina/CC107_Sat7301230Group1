@@ -36,6 +36,15 @@
         <activity android:name=".FeedDetails">
 
         </activity>
+        <activity android:name=".MedDetails">
+
+        </activity>
+        <activity android:name=".SleepDetails">
+
+        </activity>
+        <activity android:name=".VaccineDetails">
+
+        </activity>
 
         <activity android:name=".Splash_screen">
             <intent-filter>

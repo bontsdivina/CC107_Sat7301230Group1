@@ -24,12 +24,13 @@
         app:srcCompat="@android:drawable/ic_input_add" />
 
     <ImageButton
-        android:id="@+id/eating4"
+        android:id="@+id/ViewAll"
         android:layout_width="95dp"
         android:layout_height="91dp"
         android:layout_marginTop="504dp"
         android:background="@drawable/round"
         android:scaleType="fitCenter"
+        android:onClick="ViewAll"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline13"
         app:srcCompat="@drawable/sleep_history" />
@@ -89,5 +90,15 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.13" />
+
+    <ListView
+        android:id="@+id/myListView"
+        android:layout_width="343dp"
+        android:layout_height="411dp"
+        app:layout_constraintBottom_toTopOf="@+id/LogWake"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline13"
+        app:layout_constraintVertical_bias="0.373" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

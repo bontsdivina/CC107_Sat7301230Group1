@@ -1,7 +1,7 @@
 package com.example.bare;
 
 public class Medicines {
-    private String id,Date,Time,Prescription,Kind,Quantity;
+    private String id,Date,Prescription,Kind,Quantity;
     public Medicines() {
 
     }

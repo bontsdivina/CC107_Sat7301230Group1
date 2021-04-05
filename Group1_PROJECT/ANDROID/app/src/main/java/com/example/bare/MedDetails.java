@@ -1,6 +1,5 @@
 package com.example.bare;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -16,11 +15,9 @@ public class MedDetails extends Medicine{
         //Initializing Views
         tvid = findViewById(R.id.txtid);
         tvDate = findViewById(R.id.txtDate);
-        tvPrescription = findViewById(R.id.txtType);
+        tvPrescription = findViewById(R.id.txtPrescription);
+        tvKind = findViewById(R.id.txtKind);
         tvQuantity = findViewById(R.id.txtQuantity);
-
-        Intent intent =getIntent();
-        position = intent.getExtras().getInt("position");
 
         tvid.setText("ID: "+Medicine.MedArrayList.get(position).getid());
         tvDate.setText("DateTime: "+Medicine.MedArrayList.get(position).getDate());

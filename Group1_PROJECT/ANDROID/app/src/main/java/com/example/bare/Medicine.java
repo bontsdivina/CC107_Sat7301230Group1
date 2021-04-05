@@ -1,8 +1,12 @@
 package com.example.bare;
 
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -45,6 +49,43 @@ public class Medicine extends AppCompatActivity {
         listView=findViewById(R.id.myListView);
         adapter = new Med(this,MedArrayList);
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                ProgressDialog progressDialog = new ProgressDialog(view.getContext());
+
+                CharSequence[] dialogItem = {"View Data","Delete Data"};
+                builder.setTitle(MedArrayList.get(position).getDate());
+                builder.setItems(dialogItem,new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int i) {
+
+                        switch (i){
+
+                            case 0:
+
+                                startActivity(new Intent(getApplicationContext(),MedDetails.class)
+                                        .putExtra("position",position));
+
+                                break;
+
+                        }
+
+
+
+                    }
+                });
+
+
+                builder.create().show();
+
+
+            }
+        });
+
     }
     public void Back(View view) {
         Intent intent=new Intent(this, Home1.class);

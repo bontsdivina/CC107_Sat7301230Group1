@@ -1,6 +1,5 @@
 package com.example.bare;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -18,9 +17,6 @@ public class FeedDetails extends Eating {
         tvDate = findViewById(R.id.txtDate);
         tvType = findViewById(R.id.txtType);
         tvQuantity = findViewById(R.id.txtQuantity);
-
-        Intent intent =getIntent();
-        position = intent.getExtras().getInt("position");
 
         tvid.setText("ID: "+Eating.FeedArrayList.get(position).getid());
         tvDate.setText("DateTime: "+Eating.FeedArrayList.get(position).getDate());

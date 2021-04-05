@@ -27,12 +27,11 @@
         android:layout_width="95dp"
         android:layout_height="91dp"
         android:layout_marginTop="516dp"
+        android:layout_marginEnd="80dp"
         android:background="@drawable/round"
         android:onClick="ViewAll"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.781"
-        app:layout_constraintStart_toEndOf="@+id/eating3"
         app:layout_constraintTop_toTopOf="@+id/guideline10"
         app:srcCompat="@drawable/med_history" />
 
@@ -45,22 +44,10 @@
         android:onClick="InsertMed"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.227"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline10"
         app:srcCompat="@drawable/add_med" />
-
-    <ImageButton
-        android:id="@+id/eating3"
-        android:layout_width="95dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="516dp"
-        android:background="@drawable/round"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline10"
-        app:srcCompat="@drawable/med_day" />
 
     <ImageButton
         android:id="@+id/btnBack"
