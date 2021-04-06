@@ -1,5 +1,6 @@
 package com.example.bare;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -17,9 +18,12 @@ public class SleepDetails extends Sleep{
         tvDate = findViewById(R.id.txtDate);
         tvShift = findViewById(R.id.txtShift);
 
+        Intent intent =getIntent();
+        position = intent.getExtras().getInt("position");
+
         tvid.setText("ID: "+Sleep.SleepArrayList.get(position).getid());
-        tvDate.setText("DateTime: "+Sleep.SleepArrayList.get(position).getDate());
-        tvShift.setText("Shift: "+Sleep.SleepArrayList.get(position).getShift());
+        tvDate.setText("Date and Time: "+Sleep.SleepArrayList.get(position).getDate());
+        tvShift.setText("Sleep / Wake?  "+Sleep.SleepArrayList.get(position).getShift());
 
     }
 }

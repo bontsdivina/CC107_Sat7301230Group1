@@ -1,9 +1,14 @@
 package com.example.bare;
 
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,12 +21,22 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Vaccine extends AppCompatActivity {
     EditText etnameVaccine,etkind;
     String Name_Of_Vaccine,Kind;
+    Vaccined vac;
+    ListView listView;
+    VaccineAdapter adapter;
+    public static ArrayList<Vaccined> VaccineArrayList = new ArrayList<>();
+    private String URL2="https://baredb.000webhostapp.com/bare/retrieveVaccine.php";
     private String URL="https://baredb.000webhostapp.com/bare/insertVaccine.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +44,42 @@ public class Vaccine extends AppCompatActivity {
         setContentView(R.layout.activity_vaccine);
         etnameVaccine=findViewById(R.id.etnameVaccine);
         etkind=findViewById(R.id.etkind);
+        listView=findViewById(R.id.myListView);
+        adapter = new VaccineAdapter(this,VaccineArrayList);
+        listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                ProgressDialog progressDialog = new ProgressDialog(view.getContext());
+
+                CharSequence[] dialogItem = {"View Data","Delete Data"};
+                builder.setTitle(VaccineArrayList.get(position).getid());
+                builder.setItems(dialogItem,new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int i) {
+
+
+
+                                startActivity(new Intent(getApplicationContext(),VaccineDetails.class)
+                                        .putExtra("position",position));
+
+
+
+
+
+
+                    }
+                });
+
+
+                builder.create().show();
+
+
+            }
+        });
     }
     public void Back(View view) {
         Intent intent=new Intent(this, Home1.class);
@@ -44,7 +95,7 @@ public class Vaccine extends AppCompatActivity {
                 @Override
                 public void onResponse(String response) {
                     if (response.equals("success")) {
-                        Toast.makeText(Vaccine.this, "Done Vaccinating!!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Vaccine.this, "Done Vaccinated!!", Toast.LENGTH_SHORT).show();
                         etnameVaccine.setText("");
                         etkind.setText("");
 
@@ -72,5 +123,61 @@ public class Vaccine extends AppCompatActivity {
         }else{
             Toast.makeText(Vaccine.this, "Fields Should not be empty", Toast.LENGTH_SHORT).show();
         }
+    }
+    public void retrieveData() {
+
+        StringRequest request = new StringRequest(Request.Method.POST, URL2, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+                VaccineArrayList.clear();
+                try {
+
+                    JSONObject jsonObject = new JSONObject(response);
+                    String success = jsonObject.getString("success");
+                    JSONArray jsonArray = jsonObject.getJSONArray("Vaccine");
+
+                    if (success.equals("1")) {
+
+
+                        for (int i = 0; i < jsonArray.length(); i++) {
+
+                            JSONObject object = jsonArray.getJSONObject(i);
+
+                            String id = object.getString("id");
+                            String Date = object.getString("DateTime");
+                            String Name_Of_Vaccine = object.getString("Name_Of_Vaccine");
+                            String Kind = object.getString("Kind");
+
+                           vac  = new Vaccined(id, Date,Name_Of_Vaccine,Kind);
+                            VaccineArrayList.add(vac);
+                            adapter.notifyDataSetChanged();
+
+
+                        }
+
+
+                    }
+
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(Vaccine.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(request);
+    }
+
+    public void ViewAll(View view) {
+        retrieveData();
     }
 }

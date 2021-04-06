@@ -27,10 +27,10 @@
         android:layout_width="264dp"
         android:layout_height="62dp"
         android:layout_marginStart="72dp"
-        android:hint="What Kind Of Vaccine"
-        android:gravity="center"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:ems="10"
+        android:gravity="center"
+        android:hint="What Kind Of Vaccine"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etnameVaccine" />
@@ -50,12 +50,13 @@
         app:srcCompat="@drawable/add_vaccine" />
 
     <ImageButton
-        android:id="@+id/eating3"
+        android:id="@+id/ViewAll"
         android:layout_width="95dp"
         android:layout_height="91dp"
         android:layout_marginTop="504dp"
         android:background="@drawable/round"
         android:scaleType="fitCenter"
+        android:onClick="ViewAll"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.816"
         app:layout_constraintStart_toStartOf="parent"
@@ -104,11 +105,12 @@
         app:layout_constraintGuide_percent="0.14" />
 
     <ListView
-        android:layout_width="212dp"
-        android:layout_height="271dp"
-        android:layout_marginTop="24dp"
+        android:id="@+id/myListView"
+        android:layout_width="322dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etkind" />
 
