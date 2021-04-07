@@ -65,6 +65,12 @@ public class Sleep extends AppCompatActivity {
 
                                 break;
 
+                            case 1:
+
+                                deleteData(SleepArrayList.get(position).getid());
+
+                                break;
+
                         }
 
 
@@ -203,6 +209,39 @@ public class Sleep extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(request);
 
+    }
+    private void deleteData(final String id) {
+
+        StringRequest request = new StringRequest(Request.Method.POST, "https://baredb.000webhostapp.com/bare/deleteSleep.php",
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
+                        if (response.equalsIgnoreCase("Data Deleted")) {
+                            Toast.makeText(Sleep.this, "Data Deleted Successfully", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(Sleep.this, "Data Not Deleted", Toast.LENGTH_SHORT).show();
+                        }
+
+
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(Sleep.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("id", id);
+                return params;
+            }
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(request);
     }
 
 

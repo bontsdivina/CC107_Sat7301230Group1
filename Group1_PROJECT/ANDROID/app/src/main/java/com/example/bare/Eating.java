@@ -73,6 +73,12 @@ public class Eating extends AppCompatActivity{
 
                                 break;
 
+                            case 1:
+
+                                deleteData(FeedArrayList.get(position).getid());
+
+                                break;
+
                         }
 
 
@@ -153,7 +159,40 @@ public class Eating extends AppCompatActivity{
         requestQueue.add(request);
 
     }
-    public void Back(View view) {
+    private void deleteData(final String id) {
+
+        StringRequest request = new StringRequest(Request.Method.POST, "https://baredb.000webhostapp.com/bare/delete.php",
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
+                        if (response.equalsIgnoreCase("Data Deleted")) {
+                            Toast.makeText(Eating.this, "Data Deleted Successfully", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(Eating.this, "Data Not Deleted", Toast.LENGTH_SHORT).show();
+                        }
+
+
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(Eating.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("id", id);
+                return params;
+            }
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(request);
+    }
+        public void Back(View view) {
         Intent intent=new Intent(this, Home1.class);
         startActivity(intent);
     }

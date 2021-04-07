@@ -61,14 +61,22 @@ public class Vaccine extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int i) {
 
+                        switch (i){
 
+                            case 0:
 
                                 startActivity(new Intent(getApplicationContext(),VaccineDetails.class)
                                         .putExtra("position",position));
 
+                                break;
 
+                            case 1:
 
+                                deleteData(VaccineArrayList.get(position).getid());
 
+                                break;
+
+                        }
 
 
                     }
@@ -172,6 +180,39 @@ public class Vaccine extends AppCompatActivity {
                 Toast.makeText(Vaccine.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(request);
+    }
+    private void deleteData(final String id) {
+
+        StringRequest request = new StringRequest(Request.Method.POST, "https://baredb.000webhostapp.com/bare/deleteVaccine.php",
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
+                        if (response.equalsIgnoreCase("Data Deleted")) {
+                            Toast.makeText(Vaccine.this, "Data Deleted Successfully", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(Vaccine.this, "Data Not Deleted", Toast.LENGTH_SHORT).show();
+                        }
+
+
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(Vaccine.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("id", id);
+                return params;
+            }
+        };
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(request);
