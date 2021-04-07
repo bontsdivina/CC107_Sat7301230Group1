@@ -31,7 +31,7 @@
         android:onClick="ViewAll"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline13"
-        app:srcCompat="@drawable/sleep_history" />
+        app:srcCompat="@drawable/sleep2" />
 
     <ImageButton
         android:id="@+id/LogWake"
