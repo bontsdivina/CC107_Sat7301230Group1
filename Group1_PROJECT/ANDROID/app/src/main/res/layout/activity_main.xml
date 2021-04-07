@@ -12,10 +12,14 @@
         android:layout_width="156dp"
         android:layout_height="83dp"
         android:layout_marginBottom="36dp"
+
+        android:backgroundTint="#769F9A"
         android:onClick="login"
         android:text="Log IN"
-        app:backgroundTint="#769F9A"
+
+        android:textSize="20dp"
         app:cornerRadius="8dp"
+
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -30,6 +34,7 @@
         android:text="Sign Up"
         app:backgroundTint="#769F9A"
         app:cornerRadius="8dp"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/btnLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
