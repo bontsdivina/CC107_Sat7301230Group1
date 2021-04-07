@@ -19,7 +19,7 @@
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline13"
-        app:srcCompat="@drawable/wakeup" />
+        app:srcCompat="@drawable/add_sleep" />
 
     <ImageButton
         android:id="@+id/ViewAll"
@@ -45,7 +45,7 @@
         app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline13"
-        app:srcCompat="@drawable/add_sleep" />
+        app:srcCompat="@drawable/wakeup" />
 
     <ImageButton
         android:id="@+id/btnBack"
