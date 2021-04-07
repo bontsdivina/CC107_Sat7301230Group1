@@ -12,7 +12,7 @@
         android:id="@+id/btnRegister"
         android:layout_width="156dp"
         android:layout_height="83dp"
-        android:layout_marginBottom="240dp"
+        android:layout_marginBottom="148dp"
         android:onClick="Register"
         android:text="Register"
         app:backgroundTint="#769F9A"
@@ -29,8 +29,8 @@
         android:layout_width="156dp"
         android:layout_height="83dp"
         android:layout_marginBottom="132dp"
-        android:text="Cancel"
         android:onClick="cancel"
+        android:text="Cancel"
         app:backgroundTint="#769F9A"
         app:cornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,83 +38,14 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnRegister"
-        app:layout_constraintVertical_bias="0.296" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="415dp"
-        android:layout_height="473dp"
-        android:background="#FFFFFF"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/footprint_bg" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:background="@drawable/input_design"
-        android:id="@+id/etReenterPassword"
-        android:layout_width="219dp"
-        android:layout_height="46dp"
-        android:layout_marginBottom="136dp"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Re-Enter Password"
-        android:inputType="textPassword"
-        android:textColor="#070707"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.848"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4"
-        app:layout_constraintVertical_bias="0.117" />
-
-    <EditText
-        android:background="@drawable/input_design"
-        android:id="@+id/etName"
-        android:layout_width="223dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="156dp"
-        android:gravity="center"
-        android:hint="Username"
-        android:inputType="textPersonName"
-        android:textColor="#090909"
-        android:textColorHighlight="#FFFFFF"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.84"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:background="@drawable/input_design"
-        android:id="@+id/etPassword"
-        android:layout_width="219dp"
-        android:layout_height="46dp"
-        android:layout_marginBottom="200dp"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:textColor="#000000"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.848"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4"
-        app:layout_constraintVertical_bias="0.117" />
-
-    <EditText
-        android:background="@drawable/input_design"
         android:id="@+id/etEmail"
         android:layout_width="227dp"
         android:layout_height="46dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/input_design"
         android:ems="10"
         android:gravity="center"
         android:hint="Email"
@@ -122,9 +53,99 @@
         android:textColor="#070707"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintHorizontal_bias="0.836"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="219dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/input_design"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.817"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="223dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="116dp"
+        android:background="@drawable/input_design"
+        android:gravity="center"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:textColor="#090909"
+        android:textColorHighlight="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.835"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="259dp"
+        android:layout_height="286dp"
+        android:background="#FFFFFF"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.642"
+        app:srcCompat="@drawable/footprint_bg" />
+
+    <TextView
+        android:layout_width="146dp"
+        android:layout_height="41dp"
+        android:text="Username:"
+        android:textColor="#769F9A"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.168" />
+
+    <TextView
+        android:layout_width="148dp"
+        android:layout_height="39dp"
+        android:text=" Password:"
+        android:textColor="#769F9A"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.268" />
+
+    <EditText
+        android:id="@+id/etReenterPassword"
+        android:layout_width="219dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/input_design"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Re-Enter Password"
+        android:inputType="textPassword"
+        android:textColor="#070707"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.802"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
 
     <TextView
 
@@ -140,33 +161,7 @@
         app:layout_constraintHorizontal_bias="0.023"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.124" />
-
-    <TextView
-        android:layout_width="146dp"
-        android:layout_height="41dp"
-        android:text="Username:"
-        android:textColor="#769F9A"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.226" />
-
-    <TextView
-        android:layout_width="148dp"
-        android:layout_height="39dp"
-        android:text=" Password:"
-        android:textColor="#769F9A"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.326" />
+        app:layout_constraintVertical_bias="0.066" />
 
     <TextView
         android:id="@+id/tvStatus"
