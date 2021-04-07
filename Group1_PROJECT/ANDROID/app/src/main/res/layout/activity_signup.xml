@@ -12,16 +12,14 @@
         android:id="@+id/textView2"
         android:layout_width="172dp"
         android:layout_height="37dp"
-        android:layout_marginStart="4dp"
         android:text="Re-Enter Pass:"
         android:textColor="#769F9A"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName3"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.368" />
+        app:layout_constraintVertical_bias="0.357" />
 
     <Button
         android:id="@+id/btnRegister"
@@ -75,7 +73,7 @@
         android:id="@+id/etReenterPassword"
         android:layout_width="219dp"
         android:layout_height="46dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="18dp"
         android:layout_marginBottom="4dp"
         android:background="@drawable/input_design"
         android:ems="10"
@@ -85,7 +83,7 @@
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintHorizontal_bias="0.942"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPassword"
         app:layout_constraintVertical_bias="0.0" />
@@ -94,7 +92,7 @@
         android:id="@+id/etPassword"
         android:layout_width="219dp"
         android:layout_height="46dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="22dp"
         android:background="@drawable/input_design"
         android:ems="10"
         android:gravity="center"
@@ -102,7 +100,7 @@
         android:textColor="#000000"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintHorizontal_bias="0.942"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etName" />
 
@@ -110,7 +108,7 @@
         android:id="@+id/etName"
         android:layout_width="223dp"
         android:layout_height="45dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="112dp"
         android:background="@drawable/input_design"
         android:gravity="center"
         android:inputType="textPersonName"
