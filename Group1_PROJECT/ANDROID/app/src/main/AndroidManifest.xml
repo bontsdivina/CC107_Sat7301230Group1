@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.BARE">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,42 +22,64 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".Signup">
+        <activity android:name=".Signup"
+            android:screenOrientation="portrait"
+            >
 
         </activity>
-        <activity android:name=".Home1">
+        <activity android:name=".Home1"
+            android:screenOrientation="portrait"
+            >
 
         </activity>
-        <activity android:name=".Eating">
+        <activity android:name=".Eating"
+            android:screenOrientation="portrait"
+            >
 
         </activity>
-        <activity android:name=".Medicine">
+        <activity android:name=".Medicine"
+            android:screenOrientation="portrait"
+            >
 
         </activity>
-        <activity android:name=".Sleep">
+        <activity android:name=".Sleep"
+            android:screenOrientation="portrait"
+            >
 
         </activity>
-        <activity android:name=".FeedDetails">
+        <activity android:name=".FeedDetails"
+            android:screenOrientation="portrait"
+            >
 
         </activity>
-        <activity android:name=".MedDetails">
+        <activity android:name=".MedDetails"
+            android:screenOrientation="portrait"
+            >
 
         </activity>
-        <activity android:name=".SleepDetails">
+        <activity android:name=".SleepDetails"
+            android:screenOrientation="portrait"
+            >
 
         </activity>
-        <activity android:name=".VaccineDetails">
+        <activity android:name=".VaccineDetails"
+            android:screenOrientation="portrait"
+            >
 
         </activity>
 
-        <activity android:name=".Splash_screen">
+        <activity android:name=".Splash_screen"
+            android:screenOrientation="portrait"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Vaccine">
+        <activity android:name=".Vaccine"
+            android:screenOrientation="portrait"
+            >
 
         </activity>
     </application>
