@@ -8,6 +8,13 @@
     tools:context=".Vaccine">
 
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.99" />
+
     <EditText
         android:id="@+id/etnameVaccine"
         android:layout_width="264dp"
@@ -47,6 +54,7 @@
         app:layout_constraintHorizontal_bias="0.227"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline14"
+        app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:srcCompat="@drawable/add_vaccine" />
 
     <ImageButton
@@ -61,6 +69,7 @@
         app:layout_constraintHorizontal_bias="0.816"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline14"
+        app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:srcCompat="@drawable/vacc_history" />
 
     <ImageButton
@@ -74,6 +83,7 @@
         android:background="@drawable/round"
         android:onClick="Back"
         android:scaleType="centerCrop"
+
         app:layout_constraintBottom_toTopOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2"

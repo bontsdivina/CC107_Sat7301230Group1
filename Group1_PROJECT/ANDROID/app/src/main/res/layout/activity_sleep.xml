@@ -13,24 +13,29 @@
         android:id="@+id/LogSleep"
         android:layout_width="95dp"
         android:layout_height="91dp"
-        android:layout_marginTop="504dp"
+        android:layout_marginTop="416dp"
         android:onClick="LogSleep"
+        app:layout_constraintBottom_toTopOf="@+id/guideline17"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline13"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/add_sleep" />
 
     <ImageButton
         android:id="@+id/ViewAll"
         android:layout_width="95dp"
         android:layout_height="91dp"
-        android:layout_marginTop="504dp"
+        android:layout_marginTop="424dp"
+        android:layout_marginEnd="4dp"
         android:background="@drawable/round"
-        android:scaleType="fitCenter"
         android:onClick="ViewAll"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/guideline17"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline13"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/sleep2" />
 
     <ImageButton
@@ -41,10 +46,11 @@
         android:background="@drawable/round"
         android:onClick="LogWake"
         android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/guideline17"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline13"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/wakeup" />
 
     <ImageButton
@@ -88,6 +94,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.99" />
 
     <ListView
         android:id="@+id/myListView"
