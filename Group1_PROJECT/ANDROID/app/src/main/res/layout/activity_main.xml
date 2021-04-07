@@ -50,6 +50,7 @@
         app:srcCompat="@drawable/footprint_bg" />
 
     <EditText
+        android:background="@drawable/input_design"
         android:id="@+id/etUsername"
         android:layout_width="258dp"
         android:layout_height="55dp"
@@ -66,6 +67,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
     <EditText
+        android:background="@drawable/input_design"
         android:id="@+id/etPassword"
         android:layout_width="255dp"
         android:layout_height="46dp"
