@@ -8,20 +8,6 @@
     tools:context=".Medicine">
 
 
-    <EditText
-        android:id="@+id/etQuantity"
-        android:layout_width="264dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="44dp"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Quantity"
-        android:inputType="textPersonName"
-        android:textColor="#769F9A"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPrescription" />
-
     <ImageButton
         android:id="@+id/ViewAll"
         android:layout_width="95dp"
@@ -93,22 +79,36 @@
         android:id="@+id/etPrescription"
         android:layout_width="264dp"
         android:layout_height="40dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="112dp"
         android:ems="10"
         android:gravity="center"
         android:hint="Prescription"
         android:inputType="textPersonName"
         android:textColor="#769F9A"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline10" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <EditText
+        android:id="@+id/etQuantity"
+        android:layout_width="264dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Quantity"
+        android:inputType="textPersonName"
+        android:textColor="#769F9A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPrescription" />
 
     <EditText
         android:id="@+id/etKind"
         android:layout_width="264dp"
         android:layout_height="40dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:gravity="center"
         android:hint="Kind"
