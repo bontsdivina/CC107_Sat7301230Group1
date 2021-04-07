@@ -13,14 +13,12 @@
         android:id="@+id/LogSleep"
         android:layout_width="95dp"
         android:layout_height="91dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="504dp"
         android:onClick="LogSleep"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline13"
-        app:layout_constraintVertical_bias="0.846"
         app:srcCompat="@drawable/wakeup" />
 
     <ImageButton
