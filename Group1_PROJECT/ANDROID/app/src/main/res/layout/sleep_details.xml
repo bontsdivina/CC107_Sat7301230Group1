@@ -2,31 +2,37 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fef2ea"
     android:orientation="vertical">
+
     <TextView
+        android:id="@+id/txtid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ID:"
-        android:textSize="20sp"
-        android:id="@+id/txtid"
         android:layout_marginBottom="10dp"
+        android:text="ID:"
+        android:textColor="#769F9A"
+        android:textSize="20sp"
+
         />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Date And Time:"
         android:textSize="20sp"
         android:id="@+id/txtDate"
+        android:textColor="#769F9A"
         android:layout_marginBottom="10dp"
         />
 
     <TextView
+        android:id="@+id/txtShift"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sleep / Awake:"
-        android:textSize="20sp"
-        android:id="@+id/txtShift"
         android:layout_marginBottom="10dp"
-        />
+        android:text="Sleep / Awake:"
+        android:textColor="#769F9A"
+        android:textSize="20sp" />
 
 </LinearLayout>

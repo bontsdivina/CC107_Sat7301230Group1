@@ -73,6 +73,7 @@
 
     <EditText
         android:id="@+id/txtType"
+        android:background="@drawable/input_design"
         android:layout_width="258dp"
         android:layout_height="55dp"
         android:layout_marginTop="112dp"
@@ -89,6 +90,7 @@
 
     <EditText
         android:id="@+id/txtQty"
+        android:background="@drawable/input_design"
         android:layout_width="258dp"
         android:layout_height="55dp"
         android:layout_marginTop="16dp"
