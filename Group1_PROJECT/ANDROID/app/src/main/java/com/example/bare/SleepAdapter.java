@@ -33,9 +33,11 @@ public class SleepAdapter extends ArrayAdapter<Slept> {
 
         TextView tvID = view.findViewById(R.id.txt_id);
         TextView tvDate = view.findViewById(R.id.txt_date);
+        TextView tvShift = view.findViewById(R.id.txtShift);
 
         tvID.setText(arrayListSleep.get(position).getid());
         tvDate.setText(arrayListSleep.get(position).getDate());
+        tvShift.setText(arrayListSleep.get(position).getShift());
 
         return view;
     }
