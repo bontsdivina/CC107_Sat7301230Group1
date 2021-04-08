@@ -15,7 +15,8 @@
         android:gravity="center_vertical|center"
         android:textSize="20sp"
         android:textColor="@android:color/white"
-        android:background="@drawable/circle"/>
+        android:background="@drawable/circle"
+        android:visibility="invisible"/>
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="50dp"
