@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -8,33 +10,50 @@
     >
 
     <TextView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
         android:id="@+id/txt_id"
-        android:text="1"
-        android:gravity="center_vertical|center"
-        android:textSize="20sp"
-        android:textColor="@android:color/white"
+        android:layout_width="34dp"
+        android:layout_height="67dp"
         android:background="@drawable/circle"
-        android:visibility="invisible"/>
+        android:gravity="center_vertical|center"
+        android:text="1"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.007"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txt_date"
-        android:layout_width="213dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="10dp"
-        android:gravity="center_vertical"
+        android:layout_width="300dp"
+        android:layout_height="27dp"
+        android:gravity="center"
         android:text="Date"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.202"
+        app:layout_constraintStart_toEndOf="@+id/txt_id"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
 
     <TextView
         android:id="@+id/txtShift"
-        android:layout_width="fill_parent"
-        android:layout_height="47dp"
-        android:layout_marginLeft="10dp"
-        android:gravity="center_vertical"
+        android:layout_width="298dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="31dp"
+        android:gravity="center"
         android:text=""
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_date"
+        app:layout_constraintVertical_bias="0.0" />
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

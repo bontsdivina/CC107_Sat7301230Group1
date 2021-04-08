@@ -48,6 +48,7 @@
             android:text=" ID:   "
             android:textColor="#769F9A"
             android:textSize="25sp"
+            android:visibility="invisible"
             tools:layout_editor_absoluteX="17dp"
             tools:layout_editor_absoluteY="401dp" />
 
@@ -55,6 +56,8 @@
             android:id="@+id/txtDate"
             android:layout_width="356dp"
             android:layout_height="39dp"
+            android:paddingBottom="10dp"
+            android:layout_marginBottom="10dp"
             android:text=" Date And Time:  "
             android:textColor="#769F9A"
             android:textSize="25sp"
@@ -68,6 +71,7 @@
             android:text=" Name Of Vaccine:  "
             android:textColor="#769F9A"
             android:textSize="25sp"
+            android:layout_marginBottom="10dp"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="526dp" />
 

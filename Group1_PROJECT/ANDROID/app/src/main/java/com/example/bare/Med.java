@@ -33,9 +33,12 @@ public class Med extends ArrayAdapter<Medicines> {
 
         TextView tvID = view.findViewById(R.id.txt_id);
         TextView tvDate = view.findViewById(R.id.txt_date);
+        TextView tvShift = view.findViewById(R.id.txtShift);
+
 
         tvID.setText(arrayListMed.get(position).getid());
         tvDate.setText(arrayListMed.get(position).getDate());
+        tvShift.setText(arrayListMed.get(position).getPrescription());
 
         return view;
     }

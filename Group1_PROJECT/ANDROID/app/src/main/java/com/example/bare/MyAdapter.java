@@ -34,9 +34,11 @@ public class MyAdapter extends ArrayAdapter<Feed> {
 
         TextView tvID = view.findViewById(R.id.txt_id);
         TextView tvDate = view.findViewById(R.id.txt_date);
+        TextView tvShift = view.findViewById(R.id.txtShift);
 
         tvID.setText(arrayListFeed.get(position).getid());
         tvDate.setText(arrayListFeed.get(position).getDate());
+        tvShift.setText(arrayListFeed.get(position).getType_Of_Food());
 
         return view;
     }

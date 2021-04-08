@@ -34,10 +34,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  ID:   "
+
             android:textColor="#769F9A"
             android:textSize="25sp"
             tools:layout_editor_absoluteX="-6dp"
-            tools:layout_editor_absoluteY="432dp" />
+            tools:layout_editor_absoluteY="432dp"
+            android:visibility="invisible"
+            />
 
         <TextView
             android:id="@+id/txtDate"
@@ -46,6 +49,7 @@
             android:text="  Date/Time:  "
             android:textColor="#769F9A"
             android:textSize="25sp"
+            android:layout_marginBottom="10dp"
             tools:layout_editor_absoluteX="10dp"
             tools:layout_editor_absoluteY="476dp" />
 
@@ -55,6 +59,7 @@
             android:layout_height="wrap_content"
             android:text="  Type Of Food:  "
             android:textColor="#769F9A"
+            android:layout_marginBottom="10dp"
             android:textSize="25sp"
             tools:layout_editor_absoluteX="-13dp"
             tools:layout_editor_absoluteY="520dp" />

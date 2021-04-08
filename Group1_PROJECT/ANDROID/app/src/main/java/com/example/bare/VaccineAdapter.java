@@ -33,9 +33,12 @@ public class VaccineAdapter extends ArrayAdapter<Vaccined> {
 
         TextView tvID = view.findViewById(R.id.txt_id);
         TextView tvDate = view.findViewById(R.id.txt_date);
+        TextView tvShift = view.findViewById(R.id.txtShift);
 
         tvID.setText(arrayListVaccine.get(position).getid());
         tvDate.setText(arrayListVaccine.get(position).getDate());
+        tvShift.setText(arrayListVaccine.get(position).getName_Of_Vaccine());
+
 
         return view;
     }
