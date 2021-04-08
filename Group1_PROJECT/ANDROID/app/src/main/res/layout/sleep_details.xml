@@ -1,38 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fef2ea"
-    android:orientation="vertical">
+    android:orientation="vertical"
 
-    <TextView
-        android:id="@+id/txtid"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="ID:"
-        android:textColor="#769F9A"
-        android:textSize="20sp"
+    >
 
-        />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Date And Time:"
-        android:textSize="20sp"
-        android:id="@+id/txtDate"
-        android:textColor="#769F9A"
-        android:layout_marginBottom="10dp"
-        />
+    <LinearLayout
+        android:layout_width="390dp"
+        android:layout_height="221dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.367">
 
-    <TextView
-        android:id="@+id/txtShift"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="Sleep / Awake:"
-        android:textColor="#769F9A"
-        android:textSize="20sp" />
+        <TextView
+            android:id="@+id/txtid"
+            android:layout_width="319dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="16dp"
+            android:text="ID:"
+            android:textColor="#769F9A"
 
-</LinearLayout>
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="241dp" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Date And Time:"
+            android:textColor="#769F9A"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="284dp" />
+
+        <TextView
+            android:id="@+id/txtShift"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Sleep / Awake:"
+            android:textColor="#769F9A"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="326dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
