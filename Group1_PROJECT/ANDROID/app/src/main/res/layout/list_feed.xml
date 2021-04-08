@@ -17,15 +17,24 @@
         android:textColor="@android:color/white"
         android:background="@drawable/circle"
         android:visibility="invisible"/>
+
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
         android:id="@+id/txt_date"
-        android:text="Date"
-        android:gravity="center_vertical"
-        android:textSize="20sp"
+        android:layout_width="213dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="10dp"
-        />
+        android:gravity="center_vertical"
+        android:text="Date"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtShift"
+        android:layout_width="fill_parent"
+        android:layout_height="47dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:text=""
+        android:textSize="20sp" />
 
 
 </LinearLayout>
