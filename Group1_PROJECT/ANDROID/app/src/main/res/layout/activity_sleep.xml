@@ -108,6 +108,7 @@
         android:layout_height="411dp"
         app:layout_constraintBottom_toTopOf="@+id/LogWake"
         app:layout_constraintEnd_toEndOf="parent"
+        android:scrollbars="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline13"
         app:layout_constraintVertical_bias="0.373" />

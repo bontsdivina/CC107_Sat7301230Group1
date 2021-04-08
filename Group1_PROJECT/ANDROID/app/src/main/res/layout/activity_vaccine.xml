@@ -120,6 +120,7 @@
         android:layout_width="322dp"
         android:layout_height="320dp"
         android:layout_marginTop="16dp"
+        android:scrollbars="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
