@@ -19,8 +19,8 @@
         app:srcCompat="@drawable/logo1" />
 
     <LinearLayout
-        android:layout_width="369dp"
-        android:layout_height="204dp"
+        android:layout_width="383dp"
+        android:layout_height="229dp"
         android:layout_marginEnd="7dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/guideline24"
@@ -34,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="ID:   "
+            android:text=" ID:   "
             android:textColor="#769F9A"
             android:textSize="25sp" />
 
@@ -43,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="Date And Time:  "
+            android:text=" Date And Time:  "
             android:textColor="#769F9A"
             android:textSize="25sp" />
 
@@ -52,7 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="Prescription:  "
+            android:text=" Prescription:  "
             android:textColor="#769F9A"
             android:textSize="25sp" />
 
@@ -61,7 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="Kind:   "
+            android:text=" Kind:   "
             android:textColor="#769F9A"
             android:textSize="25sp" />
 
@@ -70,7 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="Quantity:  "
+            android:text=" Quantity:  "
             android:textColor="#769F9A"
             android:textSize="25sp" />
     </LinearLayout>

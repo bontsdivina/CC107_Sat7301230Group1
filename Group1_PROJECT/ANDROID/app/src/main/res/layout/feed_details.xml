@@ -22,8 +22,8 @@
         app:srcCompat="@drawable/logo1" />
 
     <LinearLayout
-        android:layout_width="369dp"
-        android:layout_height="204dp"
+        android:layout_width="373dp"
+        android:layout_height="190dp"
         android:layout_marginEnd="7dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/guideline27"
@@ -39,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="ID:   "
+            android:text="  ID:   "
             android:textColor="#769F9A"
             android:textSize="25sp" />
 
@@ -48,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="Date/Time:  "
+            android:text="  Date/Time:  "
             android:textColor="#769F9A"
             android:textSize="25sp" />
 
@@ -57,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="Type Of Food:  "
+            android:text="  Type Of Food:  "
             android:textColor="#769F9A"
             android:textSize="25sp" />
 
@@ -66,7 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="Quantity:   "
+            android:text="  Quantity:   "
             android:textColor="#769F9A"
             android:textSize="25sp" />
 
