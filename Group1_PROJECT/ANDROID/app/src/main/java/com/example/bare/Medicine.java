@@ -25,16 +25,21 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TimeZone;
 
 public class Medicine extends AppCompatActivity {
     EditText etPrescription,etKind,etQuantity;
-    String Prescription,Kind,Quantity;
+    String Prescription,Kind,DateTime,Quantity;
     Medicines med;
     ListView listView;
     Med adapter;
+    Calendar calendar;
+    SimpleDateFormat format;
     public static ArrayList<Medicines> MedArrayList = new ArrayList<>();
     private String URL="https://baredb.000webhostapp.com/bare/insertMed.php";
     private String URL2="https://baredb.000webhostapp.com/bare/retrieveMed.php";
@@ -49,6 +54,10 @@ public class Medicine extends AppCompatActivity {
         listView=findViewById(R.id.myListView);
         adapter = new Med(this,MedArrayList);
         listView.setAdapter(adapter);
+        calendar = Calendar.getInstance();
+        format = new SimpleDateFormat("E, dd MMM yyyy HH:mm:ss");
+        format.setTimeZone(TimeZone.getTimeZone("Asia/Manila"));
+        DateTime =format.format(calendar.getTime());
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -125,6 +134,7 @@ public class Medicine extends AppCompatActivity {
                 @Override
                 protected Map<String, String> getParams() throws AuthFailureError {
                     Map<String, String> data = new HashMap<>();
+                    data.put("DateTime", DateTime);
                     data.put("Prescription", Prescription);
                     data.put("Kind", Kind);
                     data.put("Quantity", Quantity);
@@ -234,6 +244,7 @@ public class Medicine extends AppCompatActivity {
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(request);
+        retrieveData();
     }
 
     public void ViewAll(View view) {

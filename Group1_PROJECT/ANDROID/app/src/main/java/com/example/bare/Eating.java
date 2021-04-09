@@ -25,16 +25,20 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TimeZone;
 
 
 public class Eating extends AppCompatActivity{
     EditText txtType,txtQty;
     MyAdapter adapter;
-    String Date, Time,Type_Of_Food,Quantity;
-    ProgressDialog mProgressDialog;
+    String DateTime,Type_Of_Food,Quantity;
+    SimpleDateFormat format;
+    Calendar calendar;
     ListView listView;
     public static ArrayList<Feed> FeedArrayList = new ArrayList<>();
     private String URL="https://baredb.000webhostapp.com/bare/insertfeed.php";
@@ -50,6 +54,10 @@ public class Eating extends AppCompatActivity{
         listView=findViewById(R.id.myListView);
         adapter = new MyAdapter(this,FeedArrayList);
         listView.setAdapter(adapter);
+        calendar = Calendar.getInstance();
+        format = new SimpleDateFormat("E, dd MMM yyyy HH:mm:ss");
+        format.setTimeZone(TimeZone.getTimeZone("Asia/Manila"));
+        DateTime =format.format(calendar.getTime());
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -191,6 +199,7 @@ public class Eating extends AppCompatActivity{
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(request);
+        retrieveData();
     }
         public void Back(View view) {
         Intent intent=new Intent(this, Home1.class);
@@ -222,6 +231,7 @@ public class Eating extends AppCompatActivity{
                 @Override
                 protected Map<String, String> getParams() throws AuthFailureError {
                     Map<String, String> data = new HashMap<>();
+                    data.put("DateTime", DateTime);
                     data.put("Type_Of_Food", Type_Of_Food);
                     data.put("Quantity", Quantity);
                     return data;

@@ -25,16 +25,21 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TimeZone;
 
 public class Vaccine extends AppCompatActivity {
     EditText etnameVaccine,etkind;
-    String Name_Of_Vaccine,Kind;
+    String Name_Of_Vaccine,Kind,DateTime;
     Vaccined vac;
     ListView listView;
     VaccineAdapter adapter;
+    Calendar calendar;
+    SimpleDateFormat format;
     public static ArrayList<Vaccined> VaccineArrayList = new ArrayList<>();
     private String URL2="https://baredb.000webhostapp.com/bare/retrieveVaccine.php";
     private String URL="https://baredb.000webhostapp.com/bare/insertVaccine.php";
@@ -47,6 +52,10 @@ public class Vaccine extends AppCompatActivity {
         listView=findViewById(R.id.myListView);
         adapter = new VaccineAdapter(this,VaccineArrayList);
         listView.setAdapter(adapter);
+        calendar = Calendar.getInstance();
+        format = new SimpleDateFormat("E, dd MMM yyyy HH:mm:ss");
+        format.setTimeZone(TimeZone.getTimeZone("Asia/Manila"));
+        DateTime =format.format(calendar.getTime());
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -120,6 +129,7 @@ public class Vaccine extends AppCompatActivity {
                 @Override
                 protected Map<String, String> getParams() throws AuthFailureError {
                     Map<String, String> data = new HashMap<>();
+                    data.put("DateTime", DateTime);
                     data.put("Name_Of_Vaccine", Name_Of_Vaccine);
                     data.put("Kind", Kind);
                     return data;
@@ -216,6 +226,7 @@ public class Vaccine extends AppCompatActivity {
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(request);
+        retrieveData();
     }
 
     public void ViewAll(View view) {
