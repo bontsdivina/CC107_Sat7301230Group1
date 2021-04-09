@@ -37,6 +37,7 @@ public class Medicine extends AppCompatActivity {
     String Prescription,Kind,DateTime,Quantity;
     Medicines med;
     ListView listView;
+
     Med adapter;
     Calendar calendar;
     SimpleDateFormat format;

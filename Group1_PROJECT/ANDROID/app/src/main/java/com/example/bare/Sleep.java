@@ -123,6 +123,7 @@ public class Sleep extends AppCompatActivity {
                 @Override
                 protected Map<String, String> getParams() throws AuthFailureError {
                     Map<String, String> data = new HashMap<>();
+                    data.put("DateTime", DateTime);
                     data.put("Shift", Shift);
                     return data;
                 }
