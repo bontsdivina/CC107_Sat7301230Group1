@@ -1,16 +1,17 @@
 package com.example.bare;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Home1 extends AppCompatActivity {
 
     private ImageButton eating,medicine,sleep,vaccine;
+String user;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,9 @@ public class Home1 extends AppCompatActivity {
         medicine =(ImageButton) findViewById(R.id.medicine);
         sleep =(ImageButton) findViewById(R.id.sleep);
         vaccine =(ImageButton) findViewById(R.id.vaccine);
+        Intent intent =getIntent();
+        user = intent.getExtras().getString("user");
+
 
         eating.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +36,7 @@ public class Home1 extends AppCompatActivity {
         medicine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 openMedicine();
             }
         });
@@ -53,28 +58,27 @@ public class Home1 extends AppCompatActivity {
 
 
     public void openEating(){
-        Intent intent = new Intent(this,Eating.class);
-        startActivity(intent);
+        startActivity(new Intent(getApplicationContext(),Eating.class)
+                .putExtra("user",user));
     }
 
     public void openMedicine(){
-        Intent intent = new Intent(this,Medicine.class);
-        startActivity(intent);
+        startActivity(new Intent(getApplicationContext(),Medicine.class)
+                .putExtra("user",user));
     }
 
     public void openVaccine(){
-        Intent intent = new Intent(this,Vaccine.class);
-        startActivity(intent);
+        startActivity(new Intent(getApplicationContext(),Vaccine.class)
+                .putExtra("user",user));
     }
 
     public void openSleep(){
-        Intent intent = new Intent(this,Sleep.class);
-        startActivity(intent);
+        startActivity(new Intent(getApplicationContext(),Sleep.class)
+                .putExtra("user",user));
     }
 
 
     public void Back(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        startActivity(new Intent(getApplicationContext(),MainActivity.class));
     }
 }

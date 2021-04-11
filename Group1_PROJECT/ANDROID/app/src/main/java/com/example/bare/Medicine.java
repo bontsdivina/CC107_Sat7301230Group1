@@ -34,10 +34,10 @@ import java.util.TimeZone;
 
 public class Medicine extends AppCompatActivity {
     EditText etPrescription,etKind,etQuantity;
-    String Prescription,Kind,DateTime,Quantity;
+    String Prescription,Kind,DateTime,Quantity,user;
     Medicines med;
     ListView listView;
-
+    ProgressDialog mProgressDialog;
     Med adapter;
     Calendar calendar;
     SimpleDateFormat format;
@@ -109,6 +109,8 @@ public class Medicine extends AppCompatActivity {
     }
 
     public void InsertMed(View view) {
+        Intent intent =getIntent();
+        user = intent.getExtras().getString("user");
         Prescription = etPrescription.getText().toString().trim();
         Kind = etKind.getText().toString().trim();
         Quantity = etQuantity.getText().toString().trim();
@@ -139,6 +141,7 @@ public class Medicine extends AppCompatActivity {
                     data.put("Prescription", Prescription);
                     data.put("Kind", Kind);
                     data.put("Quantity", Quantity);
+                    data.put("user", user);
                     return data;
                 }
             };
@@ -151,52 +154,34 @@ public class Medicine extends AppCompatActivity {
 
     }
     public void retrieveData(){
+        Intent intent =getIntent();
+        user = intent.getExtras().getString("user");
+        mProgressDialog = new ProgressDialog(Medicine.this);
+        mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+
+        mProgressDialog.setIndeterminate(true);
+        mProgressDialog.setCancelable(false);
+        mProgressDialog.setProgress(0);
+        mProgressDialog.setProgressNumberFormat(null);
+        mProgressDialog.setProgressPercentFormat(null);
+        mProgressDialog.show();
+
 
         StringRequest request = new StringRequest(Request.Method.POST, URL2,new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                if (response.trim().equals("success")) {
 
-                MedArrayList.clear();
-                try{
+                    showJSON(response);
+                    mProgressDialog.dismiss();
 
-                    JSONObject jsonObject = new JSONObject(response);
-                    String success = jsonObject.getString("success");
-                    JSONArray jsonArray = jsonObject.getJSONArray("Medicine");
+                } else {
 
-                    if(success.equals("1")){
-
-
-                        for(int i=0;i<jsonArray.length();i++){
-
-                            JSONObject object = jsonArray.getJSONObject(i);
-
-                            String id = object.getString("id");
-                            String Date = object.getString("DateTime");
-                            String Prescription = object.getString("Prescription");
-                            String Kind = object.getString("Kind");
-                            String Quantity = object.getString("Quantity");
-
-                            med = new Medicines(id,Date,Prescription,Kind,Quantity);
-                            MedArrayList.add(med);
-                            adapter.notifyDataSetChanged();
-
-
-
-                        }
-
-
-
-                    }
-
-
+                    showJSON(response);
+                    mProgressDialog.dismiss();
 
 
                 }
-                catch (JSONException e){
-                    e.printStackTrace();
-                }
-
-
 
 
 
@@ -207,10 +192,57 @@ public class Medicine extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(Medicine.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
-        });
-
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> data = new HashMap<>();
+                data.put("user", user);
+                return data;
+            }
+        };
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(request);
+    }
+    private void showJSON(String response) {
+        MedArrayList.clear();
+        try{
+
+            JSONObject jsonObject = new JSONObject(response);
+            String success = jsonObject.getString("success");
+            JSONArray jsonArray = jsonObject.getJSONArray("Medicine");
+
+            if(success.equals("1")){
+
+
+                for(int i=0;i<jsonArray.length();i++){
+
+                    JSONObject object = jsonArray.getJSONObject(i);
+
+                    String id = object.getString("id");
+                    String Date = object.getString("DateTime");
+                    String Prescription = object.getString("Prescription");
+                    String Kind = object.getString("Kind");
+                    String Quantity = object.getString("Quantity");
+
+                    med = new Medicines(id,Date,Prescription,Kind,Quantity);
+                    MedArrayList.add(med);
+                    adapter.notifyDataSetChanged();
+
+
+
+                }
+
+
+
+            }
+
+
+
+
+        }
+        catch (JSONException e){
+            e.printStackTrace();
+        }
 
     }
     private void deleteData(final String id) {

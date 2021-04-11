@@ -34,11 +34,12 @@ import java.util.TimeZone;
 
 public class Vaccine extends AppCompatActivity {
     EditText etnameVaccine,etkind;
-    String Name_Of_Vaccine,Kind,DateTime;
+    String Name_Of_Vaccine,Kind,DateTime,user;
     Vaccined vac;
     ListView listView;
     VaccineAdapter adapter;
     Calendar calendar;
+    ProgressDialog mProgressDialog;
     SimpleDateFormat format;
     public static ArrayList<Vaccined> VaccineArrayList = new ArrayList<>();
     private String URL2="https://baredb.000webhostapp.com/bare/retrieveVaccine.php";
@@ -105,6 +106,8 @@ public class Vaccine extends AppCompatActivity {
 
 
     public void LogVaccine(View view) {
+        Intent intent =getIntent();
+        user = intent.getExtras().getString("user");
         Name_Of_Vaccine = etnameVaccine.getText().toString().trim();
         Kind = etkind.getText().toString().trim();
         if (!Name_Of_Vaccine.equals("") && !Kind.equals("")) {
@@ -132,6 +135,7 @@ public class Vaccine extends AppCompatActivity {
                     data.put("DateTime", DateTime);
                     data.put("Name_Of_Vaccine", Name_Of_Vaccine);
                     data.put("Kind", Kind);
+                    data.put("user", user);
                     return data;
                 }
             };
@@ -144,43 +148,36 @@ public class Vaccine extends AppCompatActivity {
     }
     public void retrieveData() {
 
-        StringRequest request = new StringRequest(Request.Method.POST, URL2, new Response.Listener<String>() {
+        Intent intent =getIntent();
+        user = intent.getExtras().getString("user");
+        mProgressDialog = new ProgressDialog(Vaccine.this);
+        mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+
+        mProgressDialog.setIndeterminate(true);
+        mProgressDialog.setCancelable(false);
+        mProgressDialog.setProgress(0);
+        mProgressDialog.setProgressNumberFormat(null);
+        mProgressDialog.setProgressPercentFormat(null);
+        mProgressDialog.show();
+
+
+        StringRequest request = new StringRequest(Request.Method.POST, URL2,new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                if (response.trim().equals("success")) {
 
-                VaccineArrayList.clear();
-                try {
+                    showJSON(response);
+                    mProgressDialog.dismiss();
 
-                    JSONObject jsonObject = new JSONObject(response);
-                    String success = jsonObject.getString("success");
-                    JSONArray jsonArray = jsonObject.getJSONArray("Vaccine");
+                } else {
 
-                    if (success.equals("1")) {
-
-
-                        for (int i = 0; i < jsonArray.length(); i++) {
-
-                            JSONObject object = jsonArray.getJSONObject(i);
-
-                            String id = object.getString("id");
-                            String Date = object.getString("DateTime");
-                            String Name_Of_Vaccine = object.getString("Name_Of_Vaccine");
-                            String Kind = object.getString("Kind");
-
-                           vac  = new Vaccined(id, Date,Name_Of_Vaccine,Kind);
-                            VaccineArrayList.add(vac);
-                            adapter.notifyDataSetChanged();
+                    showJSON(response);
+                    mProgressDialog.dismiss();
 
 
-                        }
-
-
-                    }
-
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
                 }
+
+
 
 
             }
@@ -189,8 +186,14 @@ public class Vaccine extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(Vaccine.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
-        });
-
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> data = new HashMap<>();
+                data.put("user", user);
+                return data;
+            }
+        };
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(request);
     }
@@ -227,6 +230,41 @@ public class Vaccine extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(request);
         retrieveData();
+    }
+    private void showJSON(String response) {
+        VaccineArrayList.clear();
+        try {
+
+            JSONObject jsonObject = new JSONObject(response);
+            String success = jsonObject.getString("success");
+            JSONArray jsonArray = jsonObject.getJSONArray("Vaccine");
+
+            if (success.equals("1")) {
+
+
+                for (int i = 0; i < jsonArray.length(); i++) {
+
+                    JSONObject object = jsonArray.getJSONObject(i);
+
+                    String id = object.getString("id");
+                    String Date = object.getString("DateTime");
+                    String Name_Of_Vaccine = object.getString("Name_Of_Vaccine");
+                    String Kind = object.getString("Kind");
+
+                    vac  = new Vaccined(id, Date,Name_Of_Vaccine,Kind);
+                    VaccineArrayList.add(vac);
+                    adapter.notifyDataSetChanged();
+
+
+                }
+
+
+            }
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     public void ViewAll(View view) {

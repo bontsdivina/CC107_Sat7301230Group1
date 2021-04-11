@@ -37,8 +37,8 @@ public class Sleep extends AppCompatActivity {
     Slept slept;
     Calendar calendar;
     SimpleDateFormat format;
-    String DateTime;
-
+    String DateTime,user;
+    ProgressDialog mProgressDialog;
 
     public static ArrayList<Slept> SleepArrayList = new ArrayList<>();
     private String URL="https://baredb.000webhostapp.com/bare/insertSleep.php";
@@ -54,6 +54,8 @@ public class Sleep extends AppCompatActivity {
         format = new SimpleDateFormat("E, dd MMM yyyy HH:mm:ss");
         format.setTimeZone(TimeZone.getTimeZone("Asia/Manila"));
         DateTime =format.format(calendar.getTime());
+        Intent intent =getIntent();
+        user = intent.getExtras().getString("user");
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -103,6 +105,8 @@ public class Sleep extends AppCompatActivity {
     }
 
     public void LogSleep(View view) {
+        Intent intent =getIntent();
+        user = intent.getExtras().getString("user");
         String Shift="Sleep";
             StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override
@@ -125,6 +129,7 @@ public class Sleep extends AppCompatActivity {
                     Map<String, String> data = new HashMap<>();
                     data.put("DateTime", DateTime);
                     data.put("Shift", Shift);
+                    data.put("user", user);
                     return data;
                 }
             };
@@ -134,6 +139,8 @@ public class Sleep extends AppCompatActivity {
         }
 
     public void LogWake(View view) {
+        Intent intent =getIntent();
+        user = intent.getExtras().getString("user");
             String Shift="Wake";
             StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override
@@ -156,6 +163,7 @@ public class Sleep extends AppCompatActivity {
                     Map<String, String> data = new HashMap<>();
                     data.put("DateTime", DateTime);
                     data.put("Shift", Shift);
+                    data.put("user", user);
                     return data;
                 }
             };
@@ -165,49 +173,34 @@ public class Sleep extends AppCompatActivity {
         }
     public void retrieveData(){
 
+        Intent intent =getIntent();
+        user = intent.getExtras().getString("user");
+        mProgressDialog = new ProgressDialog(Sleep.this);
+        mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+
+        mProgressDialog.setIndeterminate(true);
+        mProgressDialog.setCancelable(false);
+        mProgressDialog.setProgress(0);
+        mProgressDialog.setProgressNumberFormat(null);
+        mProgressDialog.setProgressPercentFormat(null);
+        mProgressDialog.show();
+
+
         StringRequest request = new StringRequest(Request.Method.POST, URL2,new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                if (response.trim().equals("success")) {
 
-                SleepArrayList.clear();
-                try{
+                    showJSON(response);
+                    mProgressDialog.dismiss();
 
-                    JSONObject jsonObject = new JSONObject(response);
-                    String success = jsonObject.getString("success");
-                    JSONArray jsonArray = jsonObject.getJSONArray("Sleep");
+                } else {
 
-                    if(success.equals("1")){
-
-
-                        for(int i=0;i<jsonArray.length();i++){
-
-                            JSONObject object = jsonArray.getJSONObject(i);
-
-                            String id = object.getString("id");
-                            String Date = object.getString("DateTime");
-                            String Shift = object.getString("Shift");
-
-                            slept = new Slept(id,Date,Shift);
-                            SleepArrayList.add(slept);
-                            adapter.notifyDataSetChanged();
-
-
-
-                        }
-
-
-
-                    }
-
-
+                    showJSON(response);
+                    mProgressDialog.dismiss();
 
 
                 }
-                catch (JSONException e){
-                    e.printStackTrace();
-                }
-
-
 
 
 
@@ -218,11 +211,55 @@ public class Sleep extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(Sleep.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
-        });
-
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> data = new HashMap<>();
+                data.put("user", user);
+                return data;
+            }
+        };
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(request);
+    }
+    private void showJSON(String response) {
+        SleepArrayList.clear();
+        try{
 
+            JSONObject jsonObject = new JSONObject(response);
+            String success = jsonObject.getString("success");
+            JSONArray jsonArray = jsonObject.getJSONArray("Sleep");
+
+            if(success.equals("1")){
+
+
+                for(int i=0;i<jsonArray.length();i++){
+
+                    JSONObject object = jsonArray.getJSONObject(i);
+
+                    String id = object.getString("id");
+                    String Date = object.getString("DateTime");
+                    String Shift = object.getString("Shift");
+
+                    slept = new Slept(id,Date,Shift);
+                    SleepArrayList.add(slept);
+                    adapter.notifyDataSetChanged();
+
+
+
+                }
+
+
+
+            }
+
+
+
+
+        }
+        catch (JSONException e){
+            e.printStackTrace();
+        }
     }
     private void deleteData(final String id) {
 

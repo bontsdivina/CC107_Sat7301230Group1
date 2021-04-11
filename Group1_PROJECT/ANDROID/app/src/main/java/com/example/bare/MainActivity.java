@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private EditText etUsername, etPassword;
-    private String Username ,Password;
+    private String Username ,Password,user;
     private String URL= "https://baredb.000webhostapp.com/bare/login.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Username = Password = "";
         etUsername=findViewById(R.id.etUsername);
         etPassword=findViewById(R.id.etPassword);
+
     }
 
     public void Signup(View view) {
@@ -41,13 +42,15 @@ public class MainActivity extends AppCompatActivity {
     public void login(View view) {
         Username=etUsername.getText().toString();
         Password=etPassword.getText().toString();
+        user=etUsername.getText().toString();
         if(!Username.equals("") && !Password.equals("")){
             StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
                     if (response.equals("success")) {
-                        Intent intent = new Intent(MainActivity.this, Home1.class);
-                        startActivity(intent);
+                        startActivity(new Intent(getApplicationContext(),Home1.class)
+                                .putExtra("user",user));
+
                     } else if (response.equals("failure")) {
                         Toast.makeText(MainActivity.this, "Invalid Login ID/Password", Toast.LENGTH_SHORT).show();
                     }

@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01caa01b-ca95-4f2f-a0f7-12ee48d66cdd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/CC107_Sat7301230Group1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Group1_SQLite" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +25,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Group1_PROJECT/ANDROID" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="SvnConfiguration">
@@ -54,10 +53,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1615041131254" />
-    <state x="461" y="122" key="FileChooserDialogImpl" timestamp="1615039541662">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="567" y="169" key="FileChooserDialogImpl" timestamp="1618065036073">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="461" y="122" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1615039541662" />
+    <state x="567" y="169" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1618065036073" />
     <state x="261" y="110" key="IDE.errors.dialog" timestamp="1615041167736">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

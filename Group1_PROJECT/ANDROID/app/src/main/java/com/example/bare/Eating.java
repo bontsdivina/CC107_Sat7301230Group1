@@ -36,9 +36,10 @@ import java.util.TimeZone;
 public class Eating extends AppCompatActivity{
     EditText txtType,txtQty;
     MyAdapter adapter;
-    String DateTime,Type_Of_Food,Quantity;
+    String user,DateTime,Type_Of_Food,Quantity;
     SimpleDateFormat format;
     Calendar calendar;
+    ProgressDialog mProgressDialog;
     ListView listView;
     public static ArrayList<Feed> FeedArrayList = new ArrayList<>();
     private String URL="https://baredb.000webhostapp.com/bare/insertfeed.php";
@@ -58,6 +59,8 @@ public class Eating extends AppCompatActivity{
         format = new SimpleDateFormat("E, dd MMM yyyy HH:mm:ss");
         format.setTimeZone(TimeZone.getTimeZone("Asia/Manila"));
         DateTime =format.format(calendar.getTime());
+        Intent intent =getIntent();
+        user = intent.getExtras().getString("user");
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -106,51 +109,34 @@ public class Eating extends AppCompatActivity{
 
     }
     public void retrieveData(){
+        Intent intent =getIntent();
+        user = intent.getExtras().getString("user");
+        mProgressDialog = new ProgressDialog(Eating.this);
+        mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+
+        mProgressDialog.setIndeterminate(true);
+        mProgressDialog.setCancelable(false);
+        mProgressDialog.setProgress(0);
+        mProgressDialog.setProgressNumberFormat(null);
+        mProgressDialog.setProgressPercentFormat(null);
+        mProgressDialog.show();
+
 
         StringRequest request = new StringRequest(Request.Method.POST, URL2,new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        if (response.trim().equals("success")) {
 
-                        FeedArrayList.clear();
-                        try{
+                            showJSON(response);
+                            mProgressDialog.dismiss();
 
-                            JSONObject jsonObject = new JSONObject(response);
-                            String success = jsonObject.getString("success");
-                            JSONArray jsonArray = jsonObject.getJSONArray("Feed");
+                        } else {
 
-                            if(success.equals("1")){
-
-
-                                for(int i=0;i<jsonArray.length();i++){
-
-                                    JSONObject object = jsonArray.getJSONObject(i);
-
-                                    String id = object.getString("id");
-                                    String Date = object.getString("DateTime");
-                                    String Type_Of_Food = object.getString("Type_Of_Food");
-                                    String Quantity = object.getString("Quantity");
-
-                                    feed = new Feed(id,Date,Type_Of_Food,Quantity);
-                                    FeedArrayList.add(feed);
-                                    adapter.notifyDataSetChanged();
-
-
-
-                                }
-
-
-
-                            }
-
-
+                            showJSON(response);
+                            mProgressDialog.dismiss();
 
 
                         }
-                        catch (JSONException e){
-                            e.printStackTrace();
-                        }
-
-
 
 
 
@@ -161,11 +147,52 @@ public class Eating extends AppCompatActivity{
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(Eating.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
-        });
-
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> data = new HashMap<>();
+                data.put("user", user);
+                return data;
+        }
+            };
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(request);
 
+    }
+    private void showJSON(String response) {
+        FeedArrayList.clear();
+        try {
+
+            JSONObject jsonObject = new JSONObject(response);
+            String success = jsonObject.getString("success");
+            JSONArray jsonArray = jsonObject.getJSONArray("Feed");
+
+            if (success.equals("1")) {
+
+
+                for (int i = 0; i < jsonArray.length(); i++) {
+
+                    JSONObject object = jsonArray.getJSONObject(i);
+
+                    String id = object.getString("id");
+                    String Date = object.getString("DateTime");
+                    String Type_Of_Food = object.getString("Type_Of_Food");
+                    String Quantity = object.getString("Quantity");
+
+                    feed = new Feed(id, Date, Type_Of_Food, Quantity);
+                    FeedArrayList.add(feed);
+                    adapter.notifyDataSetChanged();
+
+
+                }
+
+
+            }
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
     private void deleteData(final String id) {
 
@@ -234,6 +261,7 @@ public class Eating extends AppCompatActivity{
                     data.put("DateTime", DateTime);
                     data.put("Type_Of_Food", Type_Of_Food);
                     data.put("Quantity", Quantity);
+                    data.put("user", user);
                     return data;
                 }
             };

@@ -47,10 +47,10 @@ public class Signup extends AppCompatActivity {
 
 
     public void Register(View view) {
-        name = etName.getText().toString().trim();
-        password = etPassword.getText().toString().trim();
-        email = etEmail.getText().toString().trim();
-        reenterPassword = etReenterPassword.getText().toString().trim();
+        name = etName.getText().toString();
+        password = etPassword.getText().toString();
+        email = etEmail.getText().toString();
+        reenterPassword = etReenterPassword.getText().toString();
         if (!password.equals(reenterPassword)) {
             Toast.makeText(this, "Password Mismatch Make Sure You Enter Correct Password", Toast.LENGTH_SHORT).show();
         } else if (!name.equals("") && !email.equals("") && !password.equals("")) {

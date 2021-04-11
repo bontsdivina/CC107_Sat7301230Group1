@@ -39,7 +39,7 @@
         app:srcCompat="@drawable/med_history" />
 
     <ImageButton
-        android:id="@+id/LogWake"
+        android:id="@+id/LogMed"
         android:layout_width="95dp"
         android:layout_height="91dp"
         android:layout_marginTop="516dp"
@@ -139,11 +139,11 @@
     <ListView
         android:id="@+id/myListView"
         android:layout_width="304dp"
-android:scrollbars="vertical"
         android:layout_height="332dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="12dp"
+        android:scrollbars="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etQuantity" />
 
