@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BARE</string>
+    <string name="name">Name</string>
+    <string name="blood_type">Blood Type</string>
 </resources>
