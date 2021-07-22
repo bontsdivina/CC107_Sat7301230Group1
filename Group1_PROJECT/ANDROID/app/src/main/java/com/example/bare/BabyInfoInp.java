@@ -22,8 +22,7 @@ import java.util.Map;
 public class BabyInfoInp extends AppCompatActivity {
     Button btnSave;
     EditText etBabyName, etPlace, etBday, etBlood, etGender, etWeight, etHeight;
-    String Baby_Name, Birthday, Birth_Place, Blood_Type, Gender;
-    Double Height, Weight;
+    String Baby_Name, Birthday, Birth_Place, Blood_Type, Gender, Height, Weight;
     private String URL = "https://baredb.000webhostapp.com/bare/babyinf.php";
 
     @Override
@@ -41,15 +40,16 @@ public class BabyInfoInp extends AppCompatActivity {
         Baby_Name = Birthday = Birth_Place = Blood_Type = Gender = "";
 
     }
+
     public void save(View view) {
         Baby_Name = etBabyName.getText().toString();
         Birth_Place = etPlace.getText().toString();
         Blood_Type = etBlood.getText().toString();
         Gender = etGender.getText().toString();
         Birthday = etBday.getText().toString();
-        Height = Double.parseDouble(etHeight.getText().toString());
-        Weight = Double.parseDouble(etWeight.getText().toString());
-
+        Height = etHeight.getText().toString();
+        Weight = etWeight.getText().toString();
+        if (!Baby_Name.equals("") && !Birth_Place.equals("") && !Blood_Type.equals("") && !Gender.equals("") && !Birthday.equals("") && !Height.equals("") && !Weight.equals("")) {
             StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
@@ -76,8 +76,8 @@ public class BabyInfoInp extends AppCompatActivity {
                 }
             }) {
                 @Override
-                protected Map<String,String> getParams() throws AuthFailureError {
-                    Map<String,String> data = new HashMap<>();
+                protected Map<String, String> getParams() throws AuthFailureError {
+                    Map<String, String> data = new HashMap<>();
                     data.put("Baby_Name", Baby_Name);
                     data.put("Birthday", Birthday);
                     data.put("Blood_Type", Blood_Type);
@@ -90,10 +90,10 @@ public class BabyInfoInp extends AppCompatActivity {
             };
             RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
             requestQueue.add(stringRequest);
-        }
-        else{
+        } else {
             Toast.makeText(BabyInfoInp.this, "Fields Should not be empty", Toast.LENGTH_SHORT).show();
         }
 
     }
 }
+
