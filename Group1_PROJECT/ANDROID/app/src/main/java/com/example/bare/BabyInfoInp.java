@@ -22,7 +22,7 @@ import java.util.Map;
 public class BabyInfoInp extends AppCompatActivity {
     Button btnSave;
     EditText etBabyName, etPlace, etBday, etBlood, etGender, etWeight, etHeight;
-    String Baby_Name, Birthday, Birth_Place, Blood_Type, Gender, Height, Weight;
+    String name, bplace, bday, btype, gender, height, weight;
     private String URL = "https://baredb.000webhostapp.com/bare/babyinf.php";
 
     @Override
@@ -37,19 +37,19 @@ public class BabyInfoInp extends AppCompatActivity {
         etHeight = findViewById(R.id.etHeight);
         etWeight = findViewById(R.id.etWeight);
         btnSave = findViewById(R.id.btnSave);
-        Baby_Name = Birthday = Birth_Place = Blood_Type = Gender = "";
+        name=bplace= bday=btype=gender=height=weight= "";
 
     }
 
     public void save(View view) {
-        Baby_Name = etBabyName.getText().toString();
-        Birth_Place = etPlace.getText().toString();
-        Blood_Type = etBlood.getText().toString();
-        Gender = etGender.getText().toString();
-        Birthday = etBday.getText().toString();
-        Height = etHeight.getText().toString();
-        Weight = etWeight.getText().toString();
-        if (!Baby_Name.equals("") && !Birth_Place.equals("") && !Blood_Type.equals("") && !Gender.equals("") && !Birthday.equals("") && !Height.equals("") && !Weight.equals("")) {
+        name = etBabyName.getText().toString();
+        bplace = etPlace.getText().toString();
+        btype = etBlood.getText().toString();
+        gender = etGender.getText().toString();
+        bday = etBday.getText().toString();
+        height = etHeight.getText().toString();
+        weight = etWeight.getText().toString();
+        if (!name.equals("") && !bplace.equals("") && !btype.equals("") && !gender.equals("") && !bday.equals("") && !height.equals("") && !weight.equals("")) {
             StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
@@ -78,13 +78,13 @@ public class BabyInfoInp extends AppCompatActivity {
                 @Override
                 protected Map<String, String> getParams() throws AuthFailureError {
                     Map<String, String> data = new HashMap<>();
-                    data.put("Baby_Name", Baby_Name);
-                    data.put("Birthday", Birthday);
-                    data.put("Blood_Type", Blood_Type);
-                    data.put("Gender", Gender);
-                    data.put("Weight", Weight);
-                    data.put("Height", Height);
-                    data.put("Birth_Place", Birth_Place);
+                    data.put("Baby_Name", name);
+                    data.put("Birthday", bday);
+                    data.put("Blood_Type", btype);
+                    data.put("Gender", gender);
+                    data.put("Weight", weight);
+                    data.put("Height", height);
+                    data.put("Birth_Place", bplace);
                     return data;
                 }
             };
