@@ -57,10 +57,8 @@
         android:id="@+id/btnBack"
         android:layout_width="86dp"
         android:layout_height="62dp"
-        android:layout_marginStart="100dp"
         android:layout_marginTop="16dp"
 
-        android:layout_marginEnd="16dp"
         android:layout_marginBottom="144dp"
         android:adjustViewBounds="true"
         android:background="@drawable/round"
@@ -68,8 +66,8 @@
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.781"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
         app:srcCompat="@drawable/back_button" />
 
@@ -77,8 +75,9 @@
         android:id="@+id/imageView5"
         android:layout_width="95dp"
         android:layout_height="91dp"
-        android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.979"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
         app:srcCompat="@drawable/medicine" />
