@@ -15,7 +15,9 @@
         android:flow_verticalAlign="center"
         android:text="Birthplace:"
         android:textAlignment="center"
-        tools:layout_editor_absoluteX="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView13"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="516dp" />
 
     <TextView
@@ -26,7 +28,9 @@
         android:flow_verticalAlign="center"
         android:text="Height:"
         android:textAlignment="center"
-        tools:layout_editor_absoluteX="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView12"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="446dp" />
 
     <TextView
@@ -37,8 +41,10 @@
         android:flow_verticalAlign="center"
         android:text="Weigth:"
         android:textAlignment="center"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="382dp" />
+        app:layout_constraintEnd_toStartOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="382dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView18"
@@ -48,8 +54,10 @@
         android:flow_verticalAlign="center"
         android:text="Gender:"
         android:textAlignment="center"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="317dp" />
+        app:layout_constraintEnd_toStartOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="317dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView17"
@@ -59,8 +67,10 @@
         android:flow_verticalAlign="center"
         android:text="Blood Type:"
         android:textAlignment="center"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="249dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView18"
+        app:layout_constraintEnd_toStartOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <TextView
         android:id="@+id/textView16"
@@ -70,8 +80,10 @@
         android:flow_verticalAlign="center"
         android:text="Birthday:"
         android:textAlignment="center"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="184dp" />
+        app:layout_constraintEnd_toStartOf="@+id/textView8"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="184dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView11"
@@ -249,7 +261,11 @@
         android:flow_verticalAlign="center"
         android:text="Baby Name:"
         android:textAlignment="center"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="123dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView16"
+        app:layout_constraintEnd_toStartOf="@+id/textView7"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.783" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
