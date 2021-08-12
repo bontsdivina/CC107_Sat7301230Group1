@@ -22,7 +22,7 @@ import java.util.Map;
 public class BabyInfoInp extends AppCompatActivity {
     Button btnSave;
     EditText etBabyName, etPlace, etBday, etBlood, etGender, etWeight, etHeight;
-    String name, bplace, bday, btype, gender, height, weight;
+    String user, name, bplace, bday, btype, gender, height, weight;
     private String URL = "https://baredb.000webhostapp.com/bare/babyinf.php";
 
     @Override
@@ -38,7 +38,8 @@ public class BabyInfoInp extends AppCompatActivity {
         etWeight = findViewById(R.id.etWeight);
         btnSave = findViewById(R.id.btnSave);
         name=bplace= bday=btype=gender=height=weight= "";
-
+        Intent intent =getIntent();
+        user = intent.getExtras().getString("user");
     }
 
     public void save(View view) {
@@ -66,6 +67,13 @@ public class BabyInfoInp extends AppCompatActivity {
 
                     } else if (response.equals("failure")) {
                         Toast.makeText(BabyInfoInp.this, "Something Went Wrong!", Toast.LENGTH_SHORT).show();
+                        etBabyName.setText("");
+                        etPlace.setText("");
+                        etBlood.setText("");
+                        etGender.setText("");
+                        etBday.setText("");
+                        etHeight.setText("");
+                        etWeight.setText("");
                         btnSave.setClickable(false);
                     }
                 }
@@ -85,6 +93,7 @@ public class BabyInfoInp extends AppCompatActivity {
                     data.put("Weight", weight);
                     data.put("Height", height);
                     data.put("Birth_Place", bplace);
+                    data.put("user", user);
                     return data;
                 }
             };

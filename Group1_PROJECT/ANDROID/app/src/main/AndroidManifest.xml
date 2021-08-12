@@ -73,6 +73,21 @@
             >
 
         </activity>
+        <activity android:name=".BabyInf"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".BabyDetails"
+            android:screenOrientation="portrait"
+            >
+
+        </activity>
+
         <activity android:name=".BabyInfoInp"
             android:screenOrientation="portrait"
             >
