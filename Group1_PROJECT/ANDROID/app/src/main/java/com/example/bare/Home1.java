@@ -97,16 +97,19 @@ public class Home1 extends AppCompatActivity implements PopupMenu.OnMenuItemClic
     public boolean onMenuItemClick(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.item1:
-                Toast.makeText(this, "Item 1 clicked", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), BabyInfoInp.class)
+                        .putExtra("user", user));
                 return true;
             case R.id.item2:
-                Toast.makeText(this, "Item 2 clicked", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), BabyInf.class)
+                        .putExtra("user", user));
                 return true;
             case R.id.item3:
-                Toast.makeText(this, "Item 3 clicked", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), Sched.class)
+                        .putExtra("user", user));
                 return true;
             case R.id.item4:
-                Toast.makeText(this, "Item 4 clicked", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 return true;
             default:
                 return false;
