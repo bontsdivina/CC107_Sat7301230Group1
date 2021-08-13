@@ -148,6 +148,7 @@ public class BabyInf extends AppCompatActivity{
 
                     JSONObject object = jsonArray.getJSONObject(i);
 
+                    String id = object.getString("id");
                     String Baby_Name = object.getString("Baby_Name");
                     String Birthday = object.getString("Birthday");
                     String Blood_Type = object.getString("Blood_Type");
@@ -157,7 +158,7 @@ public class BabyInf extends AppCompatActivity{
                     String Birth_Place = object.getString("Birth_Place");
 
 
-                    babyadapter = new BabyInfAdapter(Baby_Name,Birthday,Blood_Type,Gender,Weight,Height,Birth_Place);
+                    babyadapter = new BabyInfAdapter(id,Baby_Name,Birthday,Blood_Type,Gender,Weight,Height,Birth_Place);
                     BabyArrayList.add(babyadapter);
 
                     babyAdt.notifyDataSetChanged();

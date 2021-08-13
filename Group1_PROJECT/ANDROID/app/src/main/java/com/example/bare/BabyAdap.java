@@ -18,7 +18,7 @@ public class BabyAdap extends ArrayAdapter<BabyInfAdapter> {
 
 
     public BabyAdap(@NonNull Context context, List<BabyInfAdapter> arrayListBaby) {
-        super(context, R.layout.list_feed,arrayListBaby);
+        super(context, R.layout.list_baby,arrayListBaby);
 
         this.context = context;
         this.arrayListBaby = arrayListBaby;
@@ -29,12 +29,12 @@ public class BabyAdap extends ArrayAdapter<BabyInfAdapter> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_feed,null,true);
-
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_baby,null,true);
+        TextView tvID = view.findViewById(R.id.txt_id);
         TextView tvName = view.findViewById(R.id.txtName);
 
 
-
+        tvID.setText(arrayListBaby.get(position).getid());
         tvName.setText(arrayListBaby.get(position).getname());
 
         return view;

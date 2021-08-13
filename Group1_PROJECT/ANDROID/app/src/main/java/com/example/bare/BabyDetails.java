@@ -5,15 +5,16 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class BabyDetails extends BabyInf {
-    TextView tvName, tvBday, tvBtype, tvGender, tvWeight, tvHeight, tvBplace;
+    TextView tvid,tvName, tvBday, tvBtype, tvGender, tvWeight, tvHeight, tvBplace;
     int position;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.baby_info);
+        tvid = findViewById(R.id.txtid);
         tvName = findViewById(R.id.txtBname);
-        tvBday = findViewById(R.id.txtBdate);
+        tvBday = findViewById(R.id.txtBday);
         tvBtype = findViewById(R.id.txtBtype);
         tvGender = findViewById(R.id.txtGender);
         tvWeight = findViewById(R.id.txtWeight);
@@ -23,6 +24,7 @@ public class BabyDetails extends BabyInf {
         Intent intent = getIntent();
         position = intent.getExtras().getInt("position");
 
+        tvid.setText("ID: "+BabyInf.BabyArrayList.get(position).getid());
         tvName.setText("Name: " + BabyInf.BabyArrayList.get(position).getname());
         tvBday.setText("Birthday: " + BabyInf.BabyArrayList.get(position).getbday());
         tvBtype.setText("Blood type: " + BabyInf.BabyArrayList.get(position).getBtype());
