@@ -44,16 +44,16 @@
         android:layout_height="62dp"
 
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="144dp"
         android:adjustViewBounds="true"
         android:background="@drawable/round"
         android:onClick="Back"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintBottom_toTopOf="@+id/txtType"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/back_button" />
 
     <ImageView
