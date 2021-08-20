@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fef2ea"
+    android:orientation="vertical"
+
+    >
+
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.43" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="257dp"
+        android:layout_height="298dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline22"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo1" />
+
+    <LinearLayout
+        android:layout_width="369dp"
+        android:layout_height="204dp"
+        android:layout_marginStart="7dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline22"
+        app:layout_constraintVertical_bias="0.26">
+
+        <TextView
+            android:id="@+id/txtid"
+            android:layout_width="225dp"
+            android:layout_height="42dp"
+            android:visibility="invisible"
+            android:layout_marginStart="16dp"
+            android:text="ID:       "
+            android:textColor="#769F9A"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="379dp" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="57dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginBottom="10dp"
+            android:text="Date And Time:   "
+            android:textColor="#769F9A"
+            android:textSize="25sp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="447dp" />
+
+        <TextView
+            android:id="@+id/txtShift"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="52dp"
+
+            android:text="Sleep / Awake:   "
+            android:textColor="#769F9A"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="523dp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

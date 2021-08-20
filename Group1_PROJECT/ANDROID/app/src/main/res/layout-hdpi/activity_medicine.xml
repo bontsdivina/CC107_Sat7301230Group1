@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fef2ea"
+    tools:context=".Medicine">
+
+
+    <EditText
+        android:id="@+id/etQuantity"
+        android:layout_width="264dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/input_design"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Quantity"
+        android:inputType="textPersonName"
+        android:textColor="#769F9A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPrescription" />
+
+    <ImageButton
+        android:id="@+id/ViewAll"
+        android:layout_width="95dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="516dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/round"
+        android:onClick="ViewAll"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        app:layout_constraintBottom_toTopOf="@+id/guideline20"
+        app:srcCompat="@drawable/med_history" />
+
+    <ImageButton
+        android:id="@+id/LogMed"
+        android:layout_width="95dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="516dp"
+        android:background="@drawable/round"
+        android:onClick="InsertMed"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.227"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        app:layout_constraintBottom_toTopOf="@+id/guideline20"
+        app:srcCompat="@drawable/add_med" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="95dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.979"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:srcCompat="@drawable/medicine" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <EditText
+        android:id="@+id/etPrescription"
+        android:layout_width="264dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="128dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Prescription"
+        android:background="@drawable/input_design"
+        android:inputType="textPersonName"
+        android:textColor="#769F9A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etKind"
+        android:layout_width="264dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/input_design"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Kind"
+        android:inputType="textPersonName"
+        android:textColor="#769F9A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPrescription" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <ListView
+        android:id="@+id/myListView"
+        android:layout_width="304dp"
+        android:layout_height="332dp"
+        android:layout_marginTop="12dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etQuantity" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
