@@ -105,10 +105,6 @@ public class Home1 extends AppCompatActivity implements PopupMenu.OnMenuItemClic
                         .putExtra("user", user));
                 return true;
             case R.id.item3:
-                startActivity(new Intent(getApplicationContext(), Sched.class)
-                        .putExtra("user", user));
-                return true;
-            case R.id.item4:
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 return true;
             default:
