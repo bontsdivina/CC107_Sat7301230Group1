@@ -37,7 +37,7 @@ public class BabyInf extends AppCompatActivity{
     ProgressDialog mProgressDialog;
 
     public static ArrayList<BabyInfAdapter> BabyArrayList = new ArrayList<>();
-    private String URL="https://baredb.000webhostapp.com/bare/retreiveBaby.php";
+    private String URL="https://baredb.000webhostapp.com/bare/retrieveBaby.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +46,7 @@ public class BabyInf extends AppCompatActivity{
         Intent intent =getIntent();
         user = intent.getExtras().getString("user");
         listView=findViewById(R.id.myListView);
+        listView.setAdapter(babyAdt);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {

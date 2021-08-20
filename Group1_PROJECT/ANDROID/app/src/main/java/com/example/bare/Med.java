@@ -11,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.List;
-
 public class Med extends ArrayAdapter<Medicines> {
     Context context;
     List<Medicines> arrayListMed;
