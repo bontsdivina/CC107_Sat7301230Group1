@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="257dp"
-        android:layout_height="298dp"
+        android:layout_width="203dp"
+        android:layout_height="192dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline21"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/logo1" />
 
     <LinearLayout
-        android:layout_width="383dp"
+        android:layout_width="match_parent"
         android:layout_height="229dp"
         android:layout_marginStart="7dp"
         android:orientation="vertical"
@@ -35,7 +35,7 @@
             android:layout_marginBottom="10dp"
             android:text=" ID:   "
             android:textColor="#769F9A"
-            android:textSize="25sp"
+            android:textSize="15sp"
             android:visibility="invisible"/>
 
         <TextView
@@ -45,7 +45,7 @@
             android:layout_marginBottom="10dp"
             android:text=" Date And Time:  "
             android:textColor="#769F9A"
-            android:textSize="25sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/txtPrescription"
@@ -54,7 +54,7 @@
             android:layout_marginBottom="10dp"
             android:text=" Prescription:  "
             android:textColor="#769F9A"
-            android:textSize="25sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/txtKind"
@@ -63,7 +63,7 @@
             android:layout_marginBottom="10dp"
             android:text=" Kind:   "
             android:textColor="#769F9A"
-            android:textSize="25sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/txtQuantity"
@@ -72,7 +72,7 @@
             android:layout_marginBottom="10dp"
             android:text=" Quantity:  "
             android:textColor="#769F9A"
-            android:textSize="25sp" />
+            android:textSize="15sp" />
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline

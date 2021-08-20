@@ -29,7 +29,6 @@
         android:id="@+id/txtName"
         android:layout_width="300dp"
         android:layout_height="27dp"
-        android:gravity="center_horizontal"
         android:text="Name: "
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -18,9 +18,10 @@
     <EditText
         android:id="@+id/etnameVaccine"
         android:layout_width="264dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="108dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="80dp"
         android:ems="10"
+        android:textSize="15dp"
         android:background="@drawable/input_design"
         android:gravity="center"
         android:hint="Name Of Vaccine"
@@ -33,9 +34,10 @@
         android:background="@drawable/input_design"
         android:id="@+id/etkind"
         android:layout_width="264dp"
-        android:layout_height="62dp"
+        android:layout_height="30dp"
         android:layout_marginTop="4dp"
         android:ems="10"
+        android:textSize="15dp"
         android:gravity="center"
         android:hint="What Kind Of Vaccine"
         android:inputType="textPersonName"
@@ -45,9 +47,9 @@
 
     <ImageButton
         android:id="@+id/LogVaccine"
-        android:layout_width="95dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="504dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="254dp"
         android:background="@drawable/round"
         android:onClick="LogVaccine"
         android:scaleType="fitCenter"
@@ -60,9 +62,9 @@
 
     <ImageButton
         android:id="@+id/ViewAll"
-        android:layout_width="95dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="504dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="254dp"
         android:background="@drawable/round"
         android:scaleType="fitCenter"
         android:onClick="ViewAll"
@@ -75,8 +77,8 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="95dp"
-        android:layout_height="91dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -101,8 +103,8 @@
 
     <ListView
         android:id="@+id/myListView"
-        android:layout_width="322dp"
-        android:layout_height="320dp"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
         android:layout_marginTop="16dp"
         android:scrollbars="vertical"
         app:layout_constraintEnd_toEndOf="parent"
