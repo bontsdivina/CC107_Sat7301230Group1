@@ -43,7 +43,7 @@
 
         <TextView
             android:id="@+id/txtid"
-            android:layout_width="193dp"
+            android:layout_width="match_parent"
             android:layout_height="45dp"
             android:text=" ID:   "
             android:textColor="#769F9A"

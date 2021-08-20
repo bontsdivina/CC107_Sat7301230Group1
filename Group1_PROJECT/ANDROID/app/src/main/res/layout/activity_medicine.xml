@@ -11,8 +11,8 @@
     <EditText
         android:id="@+id/etQuantity"
         android:layout_width="264dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="56dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/input_design"
         android:ems="10"
         android:gravity="center"
@@ -26,38 +26,39 @@
 
     <ImageButton
         android:id="@+id/ViewAll"
-        android:layout_width="95dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="516dp"
-        android:layout_marginEnd="80dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="4dp"
         android:background="@drawable/round"
         android:onClick="ViewAll"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline10"
         app:layout_constraintBottom_toTopOf="@+id/guideline20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.257"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/med_history" />
 
     <ImageButton
         android:id="@+id/LogMed"
-        android:layout_width="95dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="516dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:background="@drawable/round"
         android:onClick="InsertMed"
         android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.227"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline10"
-        app:layout_constraintBottom_toTopOf="@+id/guideline20"
+        app:layout_constraintStart_toEndOf="@+id/ViewAll"
+        app:layout_constraintTop_toBottomOf="@+id/myListView"
         app:srcCompat="@drawable/add_med" />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="95dp"
-        android:layout_height="91dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/etPrescription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.979"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,8 +76,8 @@
     <EditText
         android:id="@+id/etPrescription"
         android:layout_width="264dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="128dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="80dp"
         android:ems="10"
         android:gravity="center"
         android:hint="Prescription"
@@ -90,7 +91,7 @@
     <EditText
         android:id="@+id/etKind"
         android:layout_width="264dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/input_design"
         android:ems="10"
@@ -119,14 +120,19 @@
 
     <ListView
         android:id="@+id/myListView"
-        android:layout_width="304dp"
-        android:layout_height="332dp"
+        android:layout_width="279dp"
+        android:layout_height="184dp"
         android:layout_marginTop="12dp"
         android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etQuantity" />
+        app:layout_constraintTop_toBottomOf="@+id/etQuantity"
+        app:layout_constraintVertical_bias="0.0">
+
+
+    </ListView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

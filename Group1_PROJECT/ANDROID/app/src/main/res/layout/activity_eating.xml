@@ -10,8 +10,8 @@
 
     <ImageButton
         android:id="@+id/ViewAll"
-        android:layout_width="95dp"
-        android:layout_height="91dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginEnd="68dp"
         android:background="@drawable/round"
         android:onClick="ViewAll"
@@ -19,14 +19,16 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline18"
         app:layout_constraintEnd_toEndOf="parent"
 
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/feed"
         app:layout_constraintTop_toBottomOf="@+id/myListView"
-        app:layout_constraintVertical_bias="0.675"
+        app:layout_constraintVertical_bias="0.666"
         app:srcCompat="@drawable/eathistory" />
 
     <ImageButton
         android:id="@+id/feed"
-        android:layout_width="95dp"
-        android:layout_height="91dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:background="@drawable/round"
         android:onClick="Feed"
         android:scaleType="fitCenter"
@@ -40,27 +42,29 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="95dp"
-        android:layout_height="91dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtType"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/eating" />
 
     <EditText
         android:id="@+id/txtType"
         android:background="@drawable/input_design"
         android:layout_width="258dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="112dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="80dp"
         android:ems="10"
         android:gravity="center"
         android:hint="Type Of Food"
         android:inputType="textPersonName"
         android:textColor="#769F9A"
-        android:textSize="25sp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,13 +74,13 @@
         android:id="@+id/txtQty"
         android:background="@drawable/input_design"
         android:layout_width="258dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="4dp"
         android:ems="10"
         android:gravity="center"
         android:hint="Quantity"
         android:textColor="#769F9A"
-        android:textSize="25sp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -92,10 +96,10 @@
 
     <ListView
         android:id="@+id/myListView"
-        android:layout_width="332dp"
-        android:layout_height="315dp"
+        android:layout_width="280dp"
+        android:layout_height="230dp"
         android:scrollbars="vertical"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtQty" />
