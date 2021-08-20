@@ -53,23 +53,6 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline20"
         app:srcCompat="@drawable/add_med" />
 
-    <ImageButton
-        android:id="@+id/btnBack"
-        android:layout_width="86dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="16dp"
-        android:adjustViewBounds="true"
-        android:background="@drawable/round"
-        android:onClick="Back"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/etPrescription"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/back_button" />
-
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="95dp"
