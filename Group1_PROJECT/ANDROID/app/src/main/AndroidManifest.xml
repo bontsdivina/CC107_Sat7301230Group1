@@ -15,11 +15,7 @@
         <activity android:name=".MainActivity"
             android:screenOrientation="portrait"
             >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <activity android:name=".Signup"
@@ -30,12 +26,6 @@
         <activity android:name=".Home1"
             android:screenOrientation="portrait"
             >
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <activity android:name=".Eating"
@@ -76,11 +66,7 @@
         <activity android:name=".BabyInf"
             android:screenOrientation="portrait"
             >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".BabyDetails"
             android:screenOrientation="portrait"
@@ -91,11 +77,7 @@
         <activity android:name=".BabyInfoInp"
             android:screenOrientation="portrait"
             >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
 
