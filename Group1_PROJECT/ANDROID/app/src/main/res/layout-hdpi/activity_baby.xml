@@ -11,8 +11,8 @@
 
     <ImageButton
         android:id="@+id/ViewAll"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginTop="1dp"
         android:background="@drawable/round"
         android:onClick="ViewAll"
@@ -27,8 +27,8 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginTop="4dp"
         app:layout_constraintBottom_toTopOf="@+id/myListView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,8 +62,8 @@
 
     <ListView
         android:id="@+id/myListView"
-        android:layout_width="257dp"
-        android:layout_height="321dp"
+        android:layout_width="320dp"
+        android:layout_height="200dp"
         android:layout_marginTop="16dp"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"

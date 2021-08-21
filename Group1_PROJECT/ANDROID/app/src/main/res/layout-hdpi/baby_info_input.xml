@@ -17,7 +17,7 @@
         android:text="Baby Information"
         android:textColor="#769F9A"
 
-        android:textSize="25sp"
+        android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -26,7 +26,7 @@
     <EditText
         android:id="@+id/etBday"
         android:layout_width="224dp"
-        android:layout_height="25dp"
+        android:layout_height="30dp"
         android:layout_marginTop="4dp"
         android:ems="10"
         android:gravity="center"
@@ -34,7 +34,7 @@
         android:inputType="textPersonName"
         android:textColor="#070707"
         android:background="@drawable/input_design"
-        android:textSize="15sp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etBabyName" />
@@ -42,7 +42,7 @@
     <EditText
         android:id="@+id/etHeight"
         android:layout_width="224dp"
-        android:layout_height="25dp"
+        android:layout_height="30dp"
         android:layout_marginTop="4dp"
         android:ems="10"
         android:gravity="center"
@@ -50,7 +50,7 @@
         android:inputType="textPersonName"
         android:background="@drawable/input_design"
         android:textColor="#070707"
-        android:textSize="15sp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etWeight" />
@@ -58,7 +58,7 @@
     <EditText
         android:id="@+id/etPlace"
         android:layout_width="224dp"
-        android:layout_height="25dp"
+        android:layout_height="30dp"
         android:layout_marginTop="4dp"
         android:ems="10"
         android:gravity="center"
@@ -66,7 +66,7 @@
         android:inputType="textPersonName"
         android:textColor="#070707"
         android:background="@drawable/input_design"
-        android:textSize="15sp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etHeight" />
@@ -74,7 +74,7 @@
     <EditText
         android:id="@+id/etBabyName"
         android:layout_width="224dp"
-        android:layout_height="25dp"
+        android:layout_height="30dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:gravity="center"
@@ -82,7 +82,7 @@
         android:inputType="textPersonName"
         android:textColor="#070707"
         android:background="@drawable/input_design"
-        android:textSize="15sp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView22" />
@@ -90,7 +90,7 @@
     <EditText
         android:id="@+id/etBlood"
         android:layout_width="224dp"
-        android:layout_height="25dp"
+        android:layout_height="30dp"
         android:layout_marginTop="4dp"
         android:ems="10"
         android:gravity="center"
@@ -98,7 +98,7 @@
         android:inputType="textPersonName"
         android:textColor="#070707"
         android:background="@drawable/input_design"
-        android:textSize="15sp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etBday" />
@@ -106,7 +106,7 @@
     <EditText
         android:id="@+id/etGender"
         android:layout_width="224dp"
-        android:layout_height="25dp"
+        android:layout_height="30dp"
         android:layout_marginTop="4dp"
         android:ems="10"
         android:gravity="center"
@@ -114,7 +114,7 @@
         android:inputType="textPersonName"
         android:textColor="#070707"
         android:background="@drawable/input_design"
-        android:textSize="15sp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etBlood" />
@@ -122,7 +122,7 @@
     <EditText
         android:id="@+id/etWeight"
         android:layout_width="224dp"
-        android:layout_height="25dp"
+        android:layout_height="30dp"
 
         android:layout_marginTop="4dp"
         android:ems="10"
@@ -131,16 +131,16 @@
         android:inputType="textPersonName"
         android:background="@drawable/input_design"
         android:textColor="#070707"
-        android:textSize="15sp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etGender" />
 
     <Button
         android:id="@+id/btnSave"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
         android:text="Save"
         android:onClick="save"
         app:backgroundTint="@color/cardview_dark_background"
