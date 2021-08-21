@@ -19,9 +19,9 @@
         android:id="@+id/etnameVaccine"
         android:layout_width="264dp"
         android:layout_height="30dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="80dp"
         android:ems="10"
-        android:textSize="20dp"
+        android:textSize="15dp"
         android:background="@drawable/input_design"
         android:gravity="center"
         android:hint="Name Of Vaccine"
@@ -37,7 +37,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="4dp"
         android:ems="10"
-        android:textSize="20dp"
+        android:textSize="15dp"
         android:gravity="center"
         android:hint="What Kind Of Vaccine"
         android:inputType="textPersonName"
@@ -47,40 +47,38 @@
 
     <ImageButton
         android:id="@+id/LogVaccine"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="220dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="254dp"
         android:background="@drawable/round"
         android:onClick="LogVaccine"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.236"
+        app:layout_constraintHorizontal_bias="0.227"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline14"
-        app:layout_constraintVertical_bias="0.659"
+        app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:srcCompat="@drawable/add_vaccine" />
 
     <ImageButton
         android:id="@+id/ViewAll"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="220dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="254dp"
         android:background="@drawable/round"
-        android:onClick="ViewAll"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/guideline19"
+        android:onClick="ViewAll"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.77"
+        app:layout_constraintHorizontal_bias="0.816"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline14"
-        app:layout_constraintVertical_bias="0.659"
+        app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:srcCompat="@drawable/vacc_history" />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -105,16 +103,14 @@
 
     <ListView
         android:id="@+id/myListView"
-        android:layout_width="320dp"
-        android:layout_height="200dp"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
         android:layout_marginTop="16dp"
         android:scrollbars="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/LogVaccine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etkind"
-        app:layout_constraintVertical_bias="0.203" />
+        app:layout_constraintTop_toBottomOf="@+id/etkind" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

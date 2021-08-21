@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="257dp"
+        android:layout_height="298dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,8 +20,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_width="410dp"
+        android:layout_height="354dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/guideline27"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,20 +31,20 @@
             android:id="@+id/txtid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="10dp"
             android:text=" ID:   "
             android:textColor="#769F9A"
-            android:textSize="5sp"
+            android:textSize="25sp"
             android:visibility="invisible" />
 
         <TextView
             android:id="@+id/txtBname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="10dp"
             android:text="Baby Name:  "
             android:textColor="#769F9A"
-            android:textSize="20dp"
+            android:textSize="25sp"
             tools:layout_editor_absoluteX="10dp"
             tools:layout_editor_absoluteY="476dp" />
 
@@ -52,10 +52,10 @@
             android:id="@+id/txtBday"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="10dp"
             android:text="Birthday: "
             android:textColor="#769F9A"
-            android:textSize="20dp"
+            android:textSize="25sp"
             tools:layout_editor_absoluteX="-13dp"
             tools:layout_editor_absoluteY="520dp" />
 
@@ -64,9 +64,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Blood Type:   "
-            android:layout_marginBottom="4dp"
             android:textColor="#769F9A"
-            android:textSize="20dp"
+            android:textSize="25sp"
             tools:layout_editor_absoluteX="-13dp"
             tools:layout_editor_absoluteY="520dp" />
 
@@ -74,10 +73,11 @@
             android:id="@+id/txtGender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:text="Gender:   "
             android:textColor="#769F9A"
-            android:textSize="20dp"
+            android:textSize="25sp"
             tools:layout_editor_absoluteX="-13dp"
             tools:layout_editor_absoluteY="520dp" />
 
@@ -85,21 +85,21 @@
             android:id="@+id/txtWeight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="10dp"
             android:text="Weight:   "
             android:textColor="#769F9A"
-            android:textSize="20dp"
-            tools:layout_editor_absoluteX="-13dp"
-            tools:layout_editor_absoluteY="561dp" />
+            android:textSize="25sp"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="561dp" />/>
 
         <TextView
             android:id="@+id/txtHeight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="10dp"
             android:text="Height:   "
             android:textColor="#769F9A"
-            android:textSize="20dp"
+            android:textSize="25sp"
             tools:layout_editor_absoluteX="26dp"
             tools:layout_editor_absoluteY="561dp" />
 
@@ -109,7 +109,7 @@
             android:layout_height="wrap_content"
             android:text="Birth Place:   "
             android:textColor="#769F9A"
-            android:textSize="20dp"
+            android:textSize="25sp"
             tools:layout_editor_absoluteX="26dp"
             tools:layout_editor_absoluteY="561dp" />
 
