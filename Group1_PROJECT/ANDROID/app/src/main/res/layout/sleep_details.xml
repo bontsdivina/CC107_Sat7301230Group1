@@ -48,10 +48,9 @@
 
         <TextView
             android:id="@+id/txtid"
-            android:layout_width="225dp"
+            android:layout_width="match_parent"
             android:layout_height="42dp"
             android:visibility="invisible"
-            android:layout_marginStart="16dp"
             android:text="ID:       "
             android:textColor="#769F9A"
             android:textSize="25sp"
