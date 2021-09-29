@@ -25,8 +25,8 @@
 
     <ImageButton
         android:id="@+id/medicine"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="138dp"
+        android:layout_height="138dp"
         android:background="@drawable/round"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
@@ -52,8 +52,8 @@
 
     <ImageButton
         android:id="@+id/sleep"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="138dp"
+        android:layout_height="138dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="77dp"
         android:layout_marginBottom="52dp"
@@ -69,8 +69,8 @@
 
     <ImageButton
         android:id="@+id/eating"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="138dp"
+        android:layout_height="138dp"
         android:background="@drawable/round"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
@@ -83,8 +83,8 @@
 
     <ImageButton
         android:id="@+id/vaccine"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="138dp"
+        android:layout_height="138dp"
         android:layout_marginTop="77dp"
         android:layout_marginBottom="52dp"
         android:background="@drawable/round"

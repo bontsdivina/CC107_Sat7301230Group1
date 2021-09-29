@@ -10,8 +10,8 @@
 
     <ImageButton
         android:id="@+id/ViewAll"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="100dp"
+        android:layout_height="92dp"
         android:layout_marginEnd="64dp"
         android:background="@drawable/round"
         android:onClick="ViewAll"
@@ -25,8 +25,8 @@
 
     <ImageButton
         android:id="@+id/feed"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="100dp"
+        android:layout_height="92dp"
         android:background="@drawable/round"
         android:onClick="Feed"
         android:scaleType="fitCenter"
@@ -40,8 +40,8 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="92dp"
-        android:layout_height="77dp"
+        android:layout_width="100dp"
+        android:layout_height="92dp"
         android:layout_marginTop="4dp"
         app:layout_constraintBottom_toTopOf="@+id/txtType"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,9 +53,9 @@
 
     <EditText
         android:id="@+id/txtType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_width="337dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="144dp"
         android:background="@drawable/input_design"
         android:ems="10"
         android:gravity="center"
@@ -64,14 +64,13 @@
         android:textColor="#769F9A"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <EditText
         android:id="@+id/txtQty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="337dp"
+        android:layout_height="57dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/input_design"
         android:ems="10"
@@ -94,8 +93,8 @@
 
     <ListView
         android:id="@+id/myListView"
-        android:layout_width="280dp"
-        android:layout_height="143dp"
+        android:layout_width="252dp"
+        android:layout_height="249dp"
         android:layout_marginTop="12dp"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"

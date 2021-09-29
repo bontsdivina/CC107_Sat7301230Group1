@@ -10,9 +10,9 @@
 
     <EditText
         android:id="@+id/etQuantity"
-        android:layout_width="264dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="337dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/input_design"
         android:ems="10"
         android:gravity="center"
@@ -20,46 +20,45 @@
         android:inputType="textPersonName"
         android:textColor="#769F9A"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPrescription" />
+        app:layout_constraintTop_toBottomOf="@+id/etKind" />
 
     <ImageButton
         android:id="@+id/ViewAll"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="100dp"
+        android:layout_height="92dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/round"
         android:onClick="ViewAll"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guideline20"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.319"
+        app:layout_constraintHorizontal_bias="0.255"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline10"
-        app:layout_constraintVertical_bias="0.973"
+        app:layout_constraintVertical_bias="0.946"
         app:srcCompat="@drawable/med_history" />
 
     <ImageButton
         android:id="@+id/LogMed"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="100dp"
+        android:layout_height="92dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/round"
         android:onClick="InsertMed"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guideline20"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.702"
+        app:layout_constraintHorizontal_bias="0.795"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline10"
-        app:layout_constraintVertical_bias="0.973"
+        app:layout_constraintVertical_bias="0.948"
         app:srcCompat="@drawable/add_med" />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="100dp"
+        android:layout_height="92dp"
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.979"
@@ -77,13 +76,13 @@
 
     <EditText
         android:id="@+id/etPrescription"
-        android:layout_width="264dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="75dp"
+        android:layout_width="337dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/input_design"
         android:ems="10"
         android:gravity="center"
         android:hint="Prescription"
-        android:background="@drawable/input_design"
         android:inputType="textPersonName"
         android:textColor="#769F9A"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,9 +91,9 @@
 
     <EditText
         android:id="@+id/etKind"
-        android:layout_width="264dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="337dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/input_design"
         android:ems="10"
         android:gravity="center"
@@ -102,7 +101,6 @@
         android:inputType="textPersonName"
         android:textColor="#769F9A"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPrescription" />
 
@@ -122,12 +120,12 @@
 
     <ListView
         android:id="@+id/myListView"
-        android:layout_width="264dp"
-        android:layout_height="160dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="230dp"
+        android:layout_height="188dp"
+        android:layout_marginTop="38dp"
         android:scrollbars="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etQuantity" />
 

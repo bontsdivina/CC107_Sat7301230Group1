@@ -14,5 +14,6 @@
         <!-- Customize your theme here. -->
         <item name="android:forceDarkAllowed" tools:targetApi="1">false</item>
         <item name="android:textColorHint">#808080</item>
+        <item name="android:itemBackground">#fef2ea</item>
     </style>
 </resources>
